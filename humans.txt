@@ -1,0 +1,11 @@
+/* TEAM */
+	Chef, web designer & developer: Denis Semenov
+	Contact: hello [at] denisemenov.com
+	Twitter: @denisemenov
+	From: Moscow, Russia		
+
+/* SITE */
+	Last update: 2017/01/28
+	Language: Russian
+	Doctype: HTML5
+	IDE: VS Code, WebFlow, FileZilla, Photoshop, Illustrator
