@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 User-agent: *
 Allow: /
 Disallow: /404*
 Host: https://legendbc.ru
+=======
+User-agent: *
+Allow: /
+Disallow: /404*
+Host: https://legendbc.ru
+>>>>>>> 0cb143d5f4ae18ee16d9cfd1c691141d4a6dc42e
 Sitemap: https://legendbc.ru/sitemap.xml

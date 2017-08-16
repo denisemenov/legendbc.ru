@@ -255,6 +255,7 @@ em {
 }
 
 .nav-link {
+<<<<<<< HEAD
   padding-right: 15px;
   padding-left: 15px;
   color: #fff;
@@ -262,6 +263,23 @@ em {
   line-height: 20px;
 }
 
+=======
+  padding-right: 10px;
+  padding-left: 10px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@media (min-width: 1199px) {
+  .nav-link {
+    padding-right: 15px;
+    padding-left: 15px;
+    font-size: 16px;
+  }
+}
+
+>>>>>>> 0cb143d5f4ae18ee16d9cfd1c691141d4a6dc42e
 .nav-link:hover {
   color: #e3e3e3;
 }
@@ -975,6 +993,10 @@ html.w-mod-js *[data-ix="block-wrapper"] {
     transition: all 300ms ease-in-out;
     color: #1a1a1a;
     text-align: center;
+<<<<<<< HEAD
+=======
+    font-size: 16px;
+>>>>>>> 0cb143d5f4ae18ee16d9cfd1c691141d4a6dc42e
   }
   .nav-link:hover {
     color: #bea066;
@@ -1295,5 +1317,9 @@ html.w-mod-js *[data-ix="block-wrapper"] {
     -ms-transform: translate(-50%, 0%) rotate(-90deg) translate(0px, 50%);
     transform: translate(-50%, 0%) rotate(-90deg) translate(0px, 50%);
   }
+<<<<<<< HEAD
 }
 
+=======
+}
+>>>>>>> 0cb143d5f4ae18ee16d9cfd1c691141d4a6dc42e

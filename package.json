@@ -1,0 +1,45 @@
+{
+  "name": "legendbc.ru",
+  "author": "Denis Semenov aka @denisemenov",
+  "version": "1.0.0",
+  "description": "Legend Billiard Club",
+  "main": "index.js",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denisemenov/legendbc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/denisemenov/legendbc/issues"
+  },
+  "homepage": "https://github.com/denisemenov/legendbc#readme",
+  "dependencies": {
+    "browser-sync": "latest",
+    "es6-promise": "latest",
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-clean": "latest",
+    "gulp-concat": "latest",
+    "gulp-filter": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-include": "latest",
+    "gulp-jshint": "latest",
+    "gulp-line-ending-corrector": "latest",
+    "gulp-merge-media-queries": "latest",
+    "gulp-notify": "latest",
+    "gulp-plumber": "latest",
+    "gulp-real-favicon": "latest",
+    "gulp-rename": "latest",
+    "gulp-rtlcss": "latest",
+    "gulp-sass": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-uglify": "latest",
+    "gulp-uglifycss": "latest",
+    "gulp-util": "latest",
+    "gulp-wp-pot": "latest",
+    "jshint": "latest"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
