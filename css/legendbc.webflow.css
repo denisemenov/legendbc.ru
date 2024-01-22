@@ -813,6 +813,7 @@ em {
 }
 
 .reservation-button {
+  display: none;
   position: fixed;
   left: 0px;
   top: 50%;
@@ -1047,6 +1048,7 @@ html.w-mod-js *[data-ix='block-wrapper'] {
     width: 100%;
   }
   .reservation-button {
+    display: none;
     height: 20px;
     padding-top: 2px;
     padding-bottom: 2px;
@@ -1306,6 +1308,7 @@ html.w-mod-js *[data-ix='block-wrapper'] {
     width: 100%;
   }
   .reservation-button {
+    display: none;
     -webkit-transform: translate(-50%, 0%) rotate(-90deg) translate(0px, 50%);
     -ms-transform: translate(-50%, 0%) rotate(-90deg) translate(0px, 50%);
     transform: translate(-50%, 0%) rotate(-90deg) translate(0px, 50%);
