@@ -2336,7 +2336,7 @@
     var $doc = $(document);
     var google = null;
     var $maps;
-    var namespace = '.w-widget-map';
+    var namespace = '.w-widget-gmap';
     // The API key is injected here from the Webflow Integrations tab on the site's dashboard
     var googleMapsApiKey = 'AIzaSyBQ4EYEg4aRz9-yiCnerTV7bk8GCWgZOhk';
 
@@ -2401,7 +2401,7 @@
     }
 
     // Store state on element data
-    var store = 'w-widget-map';
+    var store = 'w-widget-gmap';
     function getState(el, data) {
 
       var state = $.data(el, store);
