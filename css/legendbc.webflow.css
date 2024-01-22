@@ -103,6 +103,7 @@ ul {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ul>li {
   max-width: 100%;
   list-style-type: square;
@@ -112,9 +113,16 @@ li {
   max-width: 100%;
 =======
 li {
+=======
+ul>li {
+>>>>>>> 88d04dffb6d1cedae467ac2917093b1cc28f1210
   max-width: 100%;
   list-style-type: square;
 >>>>>>> a15416a9af21c67f2eb1b60798312e7c809c714c
+}
+
+li {
+  max-width: 100%;
 }
 
 img {
@@ -266,6 +274,7 @@ em {
 
 .nav-link {
 <<<<<<< HEAD
+<<<<<<< HEAD
   padding-right: 8px;
   padding-left: 8px;
 =======
@@ -281,6 +290,10 @@ em {
   padding-right: 10px;
   padding-left: 10px;
 >>>>>>> a15416a9af21c67f2eb1b60798312e7c809c714c
+=======
+  padding-right: 8px;
+  padding-left: 8px;
+>>>>>>> 88d04dffb6d1cedae467ac2917093b1cc28f1210
   color: #fff;
   font-size: 14px;
   line-height: 20px;
@@ -289,20 +302,28 @@ em {
 @media (min-width: 1199px) {
   .nav-link {
 <<<<<<< HEAD
+<<<<<<< HEAD
     padding-right: 10px;
     padding-left: 10px;
 =======
     padding-right: 15px;
     padding-left: 15px;
 >>>>>>> a15416a9af21c67f2eb1b60798312e7c809c714c
+=======
+    padding-right: 10px;
+    padding-left: 10px;
+>>>>>>> 88d04dffb6d1cedae467ac2917093b1cc28f1210
     font-size: 16px;
   }
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0cb143d5f4ae18ee16d9cfd1c691141d4a6dc42e
 >>>>>>> a15416a9af21c67f2eb1b60798312e7c809c714c
+=======
+>>>>>>> 88d04dffb6d1cedae467ac2917093b1cc28f1210
 .nav-link:hover {
   color: #e3e3e3;
 }
@@ -882,31 +903,42 @@ em {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 .tabs {
   display: none;
 }
 
 >>>>>>> a15416a9af21c67f2eb1b60798312e7c809c714c
+=======
+>>>>>>> 88d04dffb6d1cedae467ac2917093b1cc28f1210
 .right-copyright {
   text-align: right;
 }
 
 .checkbox-field {
 <<<<<<< HEAD
-  /* display: none; */
-=======
-  display: none;
->>>>>>> a15416a9af21c67f2eb1b60798312e7c809c714c
-  text-align: left;
-}
-
-.tournaments-subheading-form {
 <<<<<<< HEAD
   /* display: none; */
 =======
   display: none;
 >>>>>>> a15416a9af21c67f2eb1b60798312e7c809c714c
+=======
+  /* display: none; */
+>>>>>>> 88d04dffb6d1cedae467ac2917093b1cc28f1210
+  text-align: left;
+}
+
+.tournaments-subheading-form {
+<<<<<<< HEAD
+<<<<<<< HEAD
+  /* display: none; */
+=======
+  display: none;
+>>>>>>> a15416a9af21c67f2eb1b60798312e7c809c714c
+=======
+  /* display: none; */
+>>>>>>> 88d04dffb6d1cedae467ac2917093b1cc28f1210
   margin-bottom: 0px;
   text-align: left;
 }
@@ -1028,6 +1060,7 @@ html.w-mod-js *[data-ix="block-wrapper"] {
     color: #1a1a1a;
     text-align: center;
 <<<<<<< HEAD
+<<<<<<< HEAD
     font-size: 16px;
 =======
 <<<<<<< HEAD
@@ -1035,6 +1068,9 @@ html.w-mod-js *[data-ix="block-wrapper"] {
     font-size: 16px;
 >>>>>>> 0cb143d5f4ae18ee16d9cfd1c691141d4a6dc42e
 >>>>>>> a15416a9af21c67f2eb1b60798312e7c809c714c
+=======
+    font-size: 16px;
+>>>>>>> 88d04dffb6d1cedae467ac2917093b1cc28f1210
   }
   .nav-link:hover {
     color: #bea066;
@@ -1293,10 +1329,14 @@ html.w-mod-js *[data-ix="block-wrapper"] {
   }
   .review-slider {
 <<<<<<< HEAD
+<<<<<<< HEAD
     height: auto;
 =======
     height: 130px;
 >>>>>>> a15416a9af21c67f2eb1b60798312e7c809c714c
+=======
+    height: auto;
+>>>>>>> 88d04dffb6d1cedae467ac2917093b1cc28f1210
   }
   .review-text {
     font-size: 16px;
@@ -1360,6 +1400,7 @@ html.w-mod-js *[data-ix="block-wrapper"] {
     transform: translate(-50%, 0%) rotate(-90deg) translate(0px, 50%);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 <<<<<<< HEAD
@@ -1369,3 +1410,6 @@ html.w-mod-js *[data-ix="block-wrapper"] {
 }
 >>>>>>> 0cb143d5f4ae18ee16d9cfd1c691141d4a6dc42e
 >>>>>>> a15416a9af21c67f2eb1b60798312e7c809c714c
+=======
+}
+>>>>>>> 88d04dffb6d1cedae467ac2917093b1cc28f1210
