@@ -32,22 +32,20 @@ var styleWatchFiles = 'wp-content/themes/dev/sass/**/*.scss'; // Path to all *.s
 var jsWatchFiles = 'wp-content/themes/dev/js/**/*.js'; // Path to all JS files.
 var projectPHPWatchFiles = 'wp-content/themes/dev/**/*.php'; // Path to all php files.
 
-
-
 // Browsers you care about for autoprefixing.
 // Browserlist https://github.com/ai/browserslist
 const AUTOPREFIXER_BROWSERS = [
-    'last 2 version',
-    '> 1%',
-    'ie >= 9',
-    'ie_mob >= 10',
-    'ff >= 30',
-    'chrome >= 34',
-    'safari >= 7',
-    'opera >= 23',
-    'ios >= 7',
-    'android >= 4',
-    'bb >= 10'
+  'last 2 version',
+  '> 1%',
+  'ie >= 9',
+  'ie_mob >= 10',
+  'ff >= 30',
+  'chrome >= 34',
+  'safari >= 7',
+  'opera >= 23',
+  'ios >= 7',
+  'android >= 4',
+  'bb >= 10',
 ];
 
 require('es6-promise').polyfill();
@@ -59,45 +57,39 @@ require('es6-promise').polyfill();
  */
 
 var gulp = require('gulp'),
+  // CSS related plugins.
+  sass = require('gulp-sass'), // Gulp pluign for Sass compilation.
+  uglifycss = require('gulp-uglifycss'), // Minifies CSS files.
+  autoprefixer = require('gulp-autoprefixer'), // Autoprefixing magic.
+  mmq = require('gulp-merge-media-queries'), // Combine matching media queries into one media query definition.
+  rtlcss = require('gulp-rtlcss'), // Convert LTR CSS to RTL
+  // JS related plugins.
+  concat = require('gulp-concat'), // Concatenates JS files
+  uglifyjs = require('gulp-uglify'), // Minifies JS files
+  jshint = require('gulp-jshint'), // JSHint helps to detect errors and potential problems in js code
+  // Image realted plugins.
+  imagemin = require('gulp-imagemin'), // Minify PNG, JPEG, GIF and SVG images with imagemin.
+  // Utility related plugins.
+  include = require('gulp-include'), // include is a build time include engine for Javascript, CSS, CoffeeScript and in general any type of text file that you wish to might want to "include" other files into.
+  rename = require('gulp-rename'), // Renames files E.g. style.css -> style.min.css
+  lineec = require('gulp-line-ending-corrector'), // Consistent Line Endings for non UNIX systems. Gulp Plugin for Line Ending Corrector (A utility that makes sure your files have consistent line endings)
+  filter = require('gulp-filter'), // Enables you to work on a subset of the original files by filtering them using globbing.
+  sourcemaps = require('gulp-sourcemaps'), // Maps code in a compressed file (E.g. style.css) back to it’s original position in a source file (E.g. structure.scss, which was later combined with other css files to generate style.css)
+  notify = require('gulp-notify'), // Sends message notification to you
+  browserSync = require('browser-sync').create(), // Reloads browser and injects CSS. Time-saving synchronised browser testing.
+  reload = browserSync.reload, // For manual browser reload.
+  plumber = require('gulp-plumber'), // Prevent pipe breaking caused by errors from gulp plugins
+  gutil = require('gulp-util'); // Utility functions for gulp plugins
 
-    // CSS related plugins.
-    sass = require('gulp-sass'), // Gulp pluign for Sass compilation.
-    uglifycss = require('gulp-uglifycss'), // Minifies CSS files.
-    autoprefixer = require('gulp-autoprefixer'), // Autoprefixing magic.
-    mmq = require('gulp-merge-media-queries'), // Combine matching media queries into one media query definition.
-    rtlcss = require('gulp-rtlcss'), // Convert LTR CSS to RTL
-
-    // JS related plugins.
-    concat = require('gulp-concat'), // Concatenates JS files
-    uglifyjs = require('gulp-uglify'), // Minifies JS files
-    jshint = require('gulp-jshint'), // JSHint helps to detect errors and potential problems in js code
-
-    // Image realted plugins.
-    imagemin = require('gulp-imagemin'), // Minify PNG, JPEG, GIF and SVG images with imagemin.
-
-    // Utility related plugins.
-    include = require('gulp-include'), // include is a build time include engine for Javascript, CSS, CoffeeScript and in general any type of text file that you wish to might want to "include" other files into.
-    rename = require('gulp-rename'), // Renames files E.g. style.css -> style.min.css
-    lineec = require('gulp-line-ending-corrector'), // Consistent Line Endings for non UNIX systems. Gulp Plugin for Line Ending Corrector (A utility that makes sure your files have consistent line endings)
-    filter = require('gulp-filter'), // Enables you to work on a subset of the original files by filtering them using globbing.
-    sourcemaps = require('gulp-sourcemaps'), // Maps code in a compressed file (E.g. style.css) back to it’s original position in a source file (E.g. structure.scss, which was later combined with other css files to generate style.css)
-    notify = require('gulp-notify'), // Sends message notification to you
-    browserSync = require('browser-sync').create(), // Reloads browser and injects CSS. Time-saving synchronised browser testing.
-    reload = browserSync.reload, // For manual browser reload.
-    plumber = require('gulp-plumber'), // Prevent pipe breaking caused by errors from gulp plugins
-    gutil = require('gulp-util') // Utility functions for gulp plugins
-    
-    // Favicons
-    realFavicon = require ('gulp-real-favicon');
-    fs = require('fs');
+// Favicons
+realFavicon = require('gulp-real-favicon');
+fs = require('fs');
 
 var onError = function (err) {
-    console.log('An error occurred:', gutil.colors.magenta(err.message));
-    gutil.beep();
-    this.emit('end');
+  console.log('An error occurred:', gutil.colors.magenta(err.message));
+  gutil.beep();
+  this.emit('end');
 };
-
-
 
 /**
  * Task: `clean`.
@@ -106,9 +98,8 @@ var onError = function (err) {
  *
  */
 gulp.task('clean', function () {
-    return del('wp-content/themes/bs');
+  return del('wp-content/themes/bs');
 });
-
 
 /**
  * Task: `styles`.
@@ -125,64 +116,81 @@ gulp.task('clean', function () {
  *    7. Injects CSS or reloads the browser via browserSync
  */
 gulp.task('styles', function () {
-    var stream = gulp.src(styleSRC)
-        .pipe(plumber({
-            errorHandler: onError
-        }))
-        .pipe(sourcemaps.init())
-        .pipe(sass({
-            errLogToConsole: true,
-            outputStyle: 'compact',
-            // outputStyle: 'compressed',
-            // outputStyle: 'nested',
-            // outputStyle: 'expanded',
-            precision: 10
-        }))
-        .on('error', console.error.bind(console))
-        .pipe(sourcemaps.write({
-            includeContent: false
-        }))
-        .pipe(sourcemaps.init({
-            loadMaps: true
-        }))
-        .pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
+  var stream = gulp
+    .src(styleSRC)
+    .pipe(
+      plumber({
+        errorHandler: onError,
+      })
+    )
+    .pipe(sourcemaps.init())
+    .pipe(
+      sass({
+        errLogToConsole: true,
+        outputStyle: 'compact',
+        // outputStyle: 'compressed',
+        // outputStyle: 'nested',
+        // outputStyle: 'expanded',
+        precision: 10,
+      })
+    )
+    .on('error', console.error.bind(console))
+    .pipe(
+      sourcemaps.write({
+        includeContent: false,
+      })
+    )
+    .pipe(
+      sourcemaps.init({
+        loadMaps: true,
+      })
+    )
+    .pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
 
-        .pipe(sourcemaps.write('./'))
-        .pipe(lineec()) // Consistent Line Endings for non UNIX systems.
-        .pipe(gulp.dest(styleDestination)) // Output stylesheets (style.css)
+    .pipe(sourcemaps.write('./'))
+    .pipe(lineec()) // Consistent Line Endings for non UNIX systems.
+    .pipe(gulp.dest(styleDestination)) // Output stylesheets (style.css)
 
-        .pipe(filter('**/*.css')) // Filtering stream to only css files
-        .pipe(mmq({
-            log: true
-        })) // Merge Media Queries only for .min.css version.
+    .pipe(filter('**/*.css')) // Filtering stream to only css files
+    .pipe(
+      mmq({
+        log: true,
+      })
+    ) // Merge Media Queries only for .min.css version.
 
-        .pipe(browserSync.stream()) // Reloads style.css if that is enqueued.
+    .pipe(browserSync.stream()) // Reloads style.css if that is enqueued.
 
-        .pipe(rename({
-            suffix: '.min'
-        }))
-        .pipe(uglifycss({
-            maxLineLen: 10
-        }))
-        .pipe(lineec()) // Consistent Line Endings for non UNIX systems.
-        .pipe(gulp.dest(styleDestination))
+    .pipe(
+      rename({
+        suffix: '.min',
+      })
+    )
+    .pipe(
+      uglifycss({
+        maxLineLen: 10,
+      })
+    )
+    .pipe(lineec()) // Consistent Line Endings for non UNIX systems.
+    .pipe(gulp.dest(styleDestination))
 
-        .pipe(rtlcss()) // Convert to RTL
-        .pipe(rename({
-            basename: 'rtl'
-        })) // Rename to rtl.css
-        .pipe(gulp.dest(styleDestination)) // Output RTL stylesheets (rtl.css)
+    .pipe(rtlcss()) // Convert to RTL
+    .pipe(
+      rename({
+        basename: 'rtl',
+      })
+    ) // Rename to rtl.css
+    .pipe(gulp.dest(styleDestination)) // Output RTL stylesheets (rtl.css)
 
-
-        .pipe(filter('**/*.css')) // Filtering stream to only css files 
-        .pipe(browserSync.stream()) // Reloads style.min.css if that is enqueued.
-        .pipe(notify({
-            message: 'TASK: "styles" Completed! 💯',
-            onLast: true
-        }));
-    return stream;
+    .pipe(filter('**/*.css')) // Filtering stream to only css files
+    .pipe(browserSync.stream()) // Reloads style.min.css if that is enqueued.
+    .pipe(
+      notify({
+        message: 'TASK: "styles" Completed! 💯',
+        onLast: true,
+      })
+    );
+  return stream;
 });
-
 
 /**
  * Task: `js`.
@@ -196,26 +204,30 @@ gulp.task('styles', function () {
  *     4. Uglifes/Minifies the JS file and generates script.min.js
  */
 gulp.task('js', function () {
-    var stream = gulp.src(jsSRC)
-        .pipe(jshint())
-        .pipe(jshint.reporter('default'))
-        .pipe(concat(jsFile + '.js'))
-        .pipe(lineec()) // Consistent Line Endings for non UNIX systems.
-        .pipe(gulp.dest(jsDestination))
-        .pipe(rename({
-            basename: jsFile,
-            suffix: '.min'
-        }))
-        .pipe(uglifyjs())
-        .pipe(lineec()) // Consistent Line Endings for non UNIX systems.
-        .pipe(gulp.dest(jsDestination))
-        .pipe(notify({
-            message: 'TASK: "js" Completed! 💯',
-            onLast: true
-        }));
-    return stream;
+  var stream = gulp
+    .src(jsSRC)
+    .pipe(jshint())
+    .pipe(jshint.reporter('default'))
+    .pipe(concat(jsFile + '.js'))
+    .pipe(lineec()) // Consistent Line Endings for non UNIX systems.
+    .pipe(gulp.dest(jsDestination))
+    .pipe(
+      rename({
+        basename: jsFile,
+        suffix: '.min',
+      })
+    )
+    .pipe(uglifyjs())
+    .pipe(lineec()) // Consistent Line Endings for non UNIX systems.
+    .pipe(gulp.dest(jsDestination))
+    .pipe(
+      notify({
+        message: 'TASK: "js" Completed! 💯',
+        onLast: true,
+      })
+    );
+  return stream;
 });
-
 
 /**
  * Favicons
@@ -229,73 +241,75 @@ var FAVICON_DATA_FILE = 'faviconData.json';
 // You should run it at least once to create the icons. Then,
 // you should run it whenever RealFaviconGenerator updates its
 // package (see the check-for-favicon-update task below).
-gulp.task('generate-favicon', function(done) {
-	realFavicon.generateFavicon({
-		masterPicture: 'wp-content/themes/dev/img/bs-transparent-logo-512px.png',
-		dest: 'wp-content/themes/dev/img/icons/',
-		iconsPath: 'wp-content/themes/bs/img/icons/',
-		design: {
-			ios: {
-				pictureAspect: 'backgroundAndMargin',
-				backgroundColor: '#549788',
-				margin: '18%',
-				assets: {
-					ios6AndPriorIcons: true,
-					ios7AndLaterIcons: true,
-					precomposedIcons: true,
-					declareOnlyDefaultIcon: true
-				},
-				appName: 'Billiard School'
-			},
-			desktopBrowser: {},
-			windows: {
-				pictureAspect: 'noChange',
-				backgroundColor: '#549788',
-				onConflict: 'override',
-				assets: {
-					windows80Ie10Tile: true,
-					windows10Ie11EdgeTiles: {
-						small: true,
-						medium: true,
-						big: true,
-						rectangle: true
-					}
-				},
-				appName: 'Billiard School'
-			},
-			androidChrome: {
-				pictureAspect: 'noChange',
-				themeColor: '#549788',
-				manifest: {
-					name: 'Billiard School',
-					startUrl: 'https://billiard.school',
-					display: 'standalone',
-					orientation: 'notSet',
-					onConflict: 'override',
-					declared: true
-				},
-				assets: {
-					legacyIcon: true,
-					lowResolutionIcons: false
-				}
-			},
-			safariPinnedTab: {
-				pictureAspect: 'blackAndWhite',
-				threshold: 60,
-				themeColor: '#549788'
-			}
-		},
-		settings: {
-			compression: 5,
-			scalingAlgorithm: 'Lanczos',
-			errorOnImageTooSmall: false
-		},
-		markupFile: FAVICON_DATA_FILE
-	}, function() {
-		done();
-	});
+gulp.task('generate-favicon', function (done) {
+  realFavicon.generateFavicon(
+    {
+      masterPicture: 'wp-content/themes/dev/img/bs-transparent-logo-512px.png',
+      dest: 'wp-content/themes/dev/img/icons/',
+      iconsPath: 'wp-content/themes/bs/img/icons/',
+      design: {
+        ios: {
+          pictureAspect: 'backgroundAndMargin',
+          backgroundColor: '#549788',
+          margin: '18%',
+          assets: {
+            ios6AndPriorIcons: true,
+            ios7AndLaterIcons: true,
+            precomposedIcons: true,
+            declareOnlyDefaultIcon: true,
+          },
+          appName: 'Billiard School',
+        },
+        desktopBrowser: {},
+        windows: {
+          pictureAspect: 'noChange',
+          backgroundColor: '#549788',
+          onConflict: 'override',
+          assets: {
+            windows80Ie10Tile: true,
+            windows10Ie11EdgeTiles: {
+              small: true,
+              medium: true,
+              big: true,
+              rectangle: true,
+            },
+          },
+          appName: 'Billiard School',
+        },
+        androidChrome: {
+          pictureAspect: 'noChange',
+          themeColor: '#549788',
+          manifest: {
+            name: 'Billiard School',
+            startUrl: 'https://billiard.school',
+            display: 'standalone',
+            orientation: 'notSet',
+            onConflict: 'override',
+            declared: true,
+          },
+          assets: {
+            legacyIcon: true,
+            lowResolutionIcons: false,
+          },
+        },
+        safariPinnedTab: {
+          pictureAspect: 'blackAndWhite',
+          threshold: 60,
+          themeColor: '#549788',
+        },
+      },
+      settings: {
+        compression: 5,
+        scalingAlgorithm: 'Lanczos',
+        errorOnImageTooSmall: false,
+      },
+      markupFile: FAVICON_DATA_FILE,
+    },
+    function () {
+      done();
+    }
+  );
 });
-
 
 /**
  * Task: `images`.
@@ -311,33 +325,43 @@ gulp.task('generate-favicon', function(done) {
  * again, do it with the command `gulp images`.
  */
 gulp.task('images', function () {
-    var stream = gulp.src(imagesSRC)
-        .pipe(plumber({
-            errorHandler: onError
-        }))
-        .pipe(imagemin({
-            progressive: true,
-            optimizationLevel: 7, // 0-7 low-high
-            interlaced: true,
-            svgoPlugins: [{
-                removeViewBox: false
-            }]
-        }))
-        .pipe(gulp.dest(imagesDestination))
-        .pipe(notify({
-            message: 'TASK: "images" Completed! 💯',
-            onLast: true
-        }));
-    return stream;
+  var stream = gulp
+    .src(imagesSRC)
+    .pipe(
+      plumber({
+        errorHandler: onError,
+      })
+    )
+    .pipe(
+      imagemin({
+        progressive: true,
+        optimizationLevel: 7, // 0-7 low-high
+        interlaced: true,
+        svgoPlugins: [
+          {
+            removeViewBox: false,
+          },
+        ],
+      })
+    )
+    .pipe(gulp.dest(imagesDestination))
+    .pipe(
+      notify({
+        message: 'TASK: "images" Completed! 💯',
+        onLast: true,
+      })
+    );
+  return stream;
 });
 
 // Inject the favicon markups in your HTML pages. You should run
 // this task whenever you modify a page. You can keep this task
 // as is or refactor your existing HTML pipeline.
-gulp.task('inject-favicon-markups', function() {
-	return gulp.src([ 'wp-content/themes/dev/img/icons/favicons.php' ])
-		.pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).favicon.html_code))
-        .pipe(gulp.dest(phpDestination))
+gulp.task('inject-favicon-markups', function () {
+  return gulp
+    .src(['wp-content/themes/dev/img/icons/favicons.php'])
+    .pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).favicon.html_code))
+    .pipe(gulp.dest(phpDestination));
 });
 
 /**
@@ -348,17 +372,17 @@ gulp.task('inject-favicon-markups', function() {
  * again, do it with the command `gulp php`.
  */
 gulp.task('php', function () {
-    var stream = gulp.src(phpSRC)
-        .pipe(gulp.dest(phpDestination))
-        .pipe(notify({
-            message: 'TASK: "php" Completed! 💯',
-            onLast: true
-        }));
-    return stream;
+  var stream = gulp
+    .src(phpSRC)
+    .pipe(gulp.dest(phpDestination))
+    .pipe(
+      notify({
+        message: 'TASK: "php" Completed! 💯',
+        onLast: true,
+      })
+    );
+  return stream;
 });
-
-
-
 
 /**
  * Task: `browser-sync`.
@@ -372,53 +396,50 @@ gulp.task('php', function () {
  *    4. You may want to stop the browser from openning automatically
  */
 gulp.task('browser-sync', function () {
-    browserSync.init({
+  browserSync.init({
+    // For more options
+    // @link https://browsersync.io/docs/gulp
 
-        // For more options
-        // @link https://browsersync.io/docs/gulp
+    // Project URL.
+    proxy: projectURL,
 
-        // Project URL.
-        proxy: projectURL,
+    // `true` Automatically open the browser with BrowserSync live server.
+    // `false` Stop the browser from automatically opening.
+    open: true,
 
-        // `true` Automatically open the browser with BrowserSync live server.
-        // `false` Stop the browser from automatically opening.
-        open: true,
+    // Inject CSS changes.
+    // Commnet it to reload browser for every CSS change.
+    injectChanges: true,
 
-        // Inject CSS changes.
-        // Commnet it to reload browser for every CSS change.
-        injectChanges: true,
-
-        // Use a specific port (instead of the one auto-detected by Browsersync).
-        // port: 7000,
-
-    });
+    // Use a specific port (instead of the one auto-detected by Browsersync).
+    // port: 7000,
+  });
 });
-
-
-
-
 
 // Check for updates on RealFaviconGenerator (think: Apple has just
 // released a new Touch icon along with the latest version of iOS).
 // Run this task from time to time. Ideally, make it part of your
 // continuous integration system.
-gulp.task('check-for-favicon-update', function(done) {
-	var currentVersion = JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).version;
-	realFavicon.checkForUpdates(currentVersion, function(err) {
-		if (err) {
-			throw err;
-		}
-	});
+gulp.task('check-for-favicon-update', function (done) {
+  var currentVersion = JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).version;
+  realFavicon.checkForUpdates(currentVersion, function (err) {
+    if (err) {
+      throw err;
+    }
+  });
 });
-
 
 /**
  * Watch Tasks.
  *
  * Watches for file changes and runs specific tasks.
  */
-gulp.task('default', ['styles', 'js', 'generate-favicon', 'images', 'php', 'inject-favicon-markups', 'browser-sync'], function () {
+gulp.task(
+  'default',
+  ['styles', 'js', 'generate-favicon', 'images', 'php', 'inject-favicon-markups', 'browser-sync'],
+  function () {
     gulp.watch(projectPHPWatchFiles, ['php', reload]); // Reload on PHP file changes.
     gulp.watch(styleWatchFiles, ['styles', reload]); // Reload on SCSS file changes.
     gulp.watch(jsWatchFiles, ['js', reload]); // Reload on vendorsJs file changes.
-});
+  }
+);

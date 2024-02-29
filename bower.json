@@ -2,18 +2,10 @@
   "name": "legendbc.ru",
   "description": "Legend Billiard Club",
   "main": "index.js",
-  "authors": [
-    "Denis Semenov aka @denisemenov"
-  ],
+  "authors": ["Denis Semenov aka @denisemenov"],
   "license": "ISC",
   "homepage": "https://legendbc.ru",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
+  "ignore": ["**/.*", "node_modules", "bower_components", "test", "tests"],
   "dependencies": {
     "jquery": "latest",
     "photoswipe": "latest",

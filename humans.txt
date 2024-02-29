@@ -5,7 +5,7 @@
 	From: Moscow, Russia		
 
 /* SITE */
-	Last update: 2024/01/14
+	Last update: 2024/02/29
 	Language: Russian
 	Doctype: HTML5
 
