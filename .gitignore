@@ -1,5 +1,9 @@
-# Ignore Bower components
-/bower_components
-
-# Ignore Node Modules
-/node_modules
+node_modules
+*.log*
+.nuxt
+.nitro
+.cache
+.output
+.data
+.env
+dist
