@@ -19,4 +19,12 @@ export default defineNuxtConfig({
   },
 
   compatibilityDate: '2025-01-12',
+
+  content: {
+    contentHead: true,
+    markdown: {
+      anchorLinks: false,
+      mdc: true,
+    },
+  },
 });
