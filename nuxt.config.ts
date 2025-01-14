@@ -5,12 +5,18 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxtjs/tailwindcss',
     '@nuxthq/studio',
-    '@nuxtjs/seo'
+    '@nuxtjs/seo',
+    '@nuxt/fonts',
+    '@nuxtjs/google-fonts',
+    'nuxt-swiper',
   ],
-
-  routeRules: {
-    '/': { prerender: true }
+  fonts: {
+    families: [{ name: 'Noto Sans', provider: 'google' }],
   },
 
-  compatibilityDate: '2025-01-12'
-})
+  routeRules: {
+    '/': { prerender: true },
+  },
+
+  compatibilityDate: '2025-01-12',
+});
