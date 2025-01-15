@@ -7,7 +7,6 @@ export default defineNuxtConfig({
     '@nuxthq/studio',
     '@nuxtjs/seo',
     '@nuxt/fonts',
-    '@nuxtjs/google-fonts',
     'nuxt-swiper',
   ],
   fonts: {
