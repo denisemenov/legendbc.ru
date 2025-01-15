@@ -14,6 +14,10 @@
 import { computed } from 'vue'
 import { ContentSlot } from '#components'
 
+defineSlots<{
+  default(): any
+}>()
+
 // Тип для удобства, чтобы описать пропсы
 interface Columns {
   mobile?: 1 | 2 | 3 | 4 | 5 | 6
@@ -62,9 +66,9 @@ const gridClasses = computed(() => {
   const { mobile, tablet, desktop } = props.cols || defaultCols
 
   return [
-    GRID_CLASSES[mobile || defaultCols.mobile],
-    MD_GRID_CLASSES[tablet || defaultCols.tablet],
-    LG_GRID_CLASSES[desktop || defaultCols.desktop]
+    GRID_CLASSES[(mobile || defaultCols.mobile) as keyof typeof GRID_CLASSES],
+    MD_GRID_CLASSES[(tablet || defaultCols.tablet) as keyof typeof MD_GRID_CLASSES],
+    LG_GRID_CLASSES[(desktop || defaultCols.desktop) as keyof typeof LG_GRID_CLASSES]
   ]
 })
 </script>

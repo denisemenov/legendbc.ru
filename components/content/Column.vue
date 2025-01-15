@@ -9,6 +9,10 @@
 import { computed } from 'vue'
 import { ContentSlot } from '#components'
 
+defineSlots<{
+  default(): any
+}>()
+
 const props = defineProps<{
   span?: number
 }>()
@@ -26,7 +30,7 @@ const SPAN_CLASSES = {
 const columnClass = computed(() => {
   // Безопасно подстрахуемся, что span по умолчанию = 1
   const spanValue = props.span && props.span >= 1 && props.span <= 6 ? props.span : 1
-  return SPAN_CLASSES[spanValue]
+  return SPAN_CLASSES[spanValue as keyof typeof SPAN_CLASSES]
 })
 </script>
 
