@@ -5,11 +5,9 @@ description: "Пример использования кастомных ком�
 
 # Добро пожаловать!
 
-
-::btn{href="https://example.com"}
+::btn{blank="true" block="true" href="/price" } 
   Нажмите здесь
 ::
- 
 
  
 ::grid{:cols='{"mobile":1,"tablet":2,"desktop":3}'}

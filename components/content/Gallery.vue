@@ -56,4 +56,4 @@ function openLightbox(index: number) {
 }
 </script>
 
-<style scoped></style>
+<style lang="scss"></style>

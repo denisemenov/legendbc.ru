@@ -170,7 +170,7 @@
 // Additional logic if needed can be added here
 </script>
 
-<style lang="css">
+<style lang="scss">
 .list-square {
   list-style-type: square;
 }

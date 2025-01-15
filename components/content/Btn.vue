@@ -9,7 +9,6 @@
         block && 'w-full',
       ]"
     >
-      <!-- Если слот передан, используем слот, иначе используем текст из пропа text -->
       <ContentSlot :use="$slots.default" unwrap="p" />
     </a>
   </div>
@@ -30,15 +29,13 @@ defineSlots<{
 /**
  * Пропы компонента:
  * - href: string | undefined — адрес ссылки
- * - text: string | undefined — если нужен простой текст без слота
- * - blank: boolean — если true, то target="_blank" и rel="noopener noreferrer nofollow"
- * - block: boolean — если true, занимает 100% ширины
+ * - blank: string — если есть хоть что-то в пропе, то target="_blank" и rel="noopener noreferrer string"
+ * - block: boolean — если есть хоть что-то в пропе, то занимает 100% ширины w-full
  */
 const props = defineProps<{
   href?: string;
-  text?: string;
-  blank?: boolean;
-  block?: boolean;
+  blank?: string;
+  block?: string;
 }>();
 
 /**

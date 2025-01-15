@@ -48,6 +48,20 @@
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue';
 
+declare global {
+  interface Window {
+    ymaps: typeof ymaps;
+  }
+}
+
+interface YMaps {
+  Map: any;
+  Placemark: any;
+  ready: (callback: () => void) => void;
+}
+
+declare const ymaps: YMaps;
+
 const mapContainer = ref(null);
 
 const socials = [
@@ -68,7 +82,7 @@ const socials = [
 onMounted(() => {
   // Wait for Yandex Maps API to load
   if (window.ymaps) {
-    ymaps.ready(initMap);
+    window.ymaps.ready(initMap);
   }
 });
 
@@ -109,7 +123,7 @@ function initMap() {
 }
 </script>
 
-<style scoped>
+<style lang="scss">
 /* Custom styles for the map */
 #yamap {
   @apply overflow-hidden;
