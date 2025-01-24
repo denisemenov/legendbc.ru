@@ -1,6 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/i18n', '@nuxt/content'],
+  modules: ['@nuxt/content','@nuxtjs/i18n', '@nuxt/fonts'],
+  fonts: {
+    families: [{ name: 'Noto Sans', provider: 'google' }],
+  },
   devtools: { enabled: true },
   future: {
     compatibilityVersion: 4,
@@ -12,6 +15,6 @@ export default defineNuxtConfig({
       { code: 'ru', name: 'Russian', language: 'ru-RU' },
     ],
     strategy: 'prefix_except_default',
-    defaultLocale: 'ru',
+    defaultLocale: 'en',
   },
 });

@@ -9,10 +9,14 @@
     "preview": "nuxt preview"
   },
   "dependencies": {
-    "@nuxt/content": "latest",
-    "@nuxtjs/i18n": "latest", 
+    "@nuxt/content": "https://pkg.pr.new/@nuxt/content@3006",
+    "@nuxt/fonts": "^0.10.3",
+    "@nuxtjs/i18n": "latest",
     "nuxt": "latest",
     "vue": "latest",
     "vue-router": "latest"
+  },
+  "devDependencies": {
+    "sass-embedded": "latest"
   }
 }
