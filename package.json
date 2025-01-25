@@ -6,17 +6,30 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "nuxt preview"
+    "preview": "nuxt preview",
+    "lint": "eslint",
+    "format": "prettier .  --write"
   },
   "dependencies": {
     "@nuxt/content": "https://pkg.pr.new/@nuxt/content@3006",
     "@nuxt/fonts": "^0.10.3",
+    "@nuxt/image": "1.9.0",
     "@nuxtjs/i18n": "latest",
+    "@tailwindcss/vite": "^4.0.0",
     "nuxt": "latest",
+    "tailwindcss": "^4.0.0",
     "vue": "latest",
     "vue-router": "latest"
   },
   "devDependencies": {
-    "sass-embedded": "latest"
+    "@nuxt/eslint": "^0.7.5",
+    "eslint": "^9.19.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "eslint-plugin-vue": "9.32.0",
+    "prettier": "3.4.2",
+    "sass-embedded": "latest",
+    "typescript": "^5.7.3",
+    "vite-plugin-eslint": "^1.8.1"
   }
 }

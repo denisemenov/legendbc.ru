@@ -14,13 +14,13 @@
       <div class="mb-1">
         <slot mdc-unwrap="p" />
       </div>
-      <!-- <NuxtLink
+      <!-- <NuxtLinkLocale
         v-if="$slots.buttonLink"
         :to="$slots.buttonLink"
         class="inline-block mt-8 px-8 py-4 border-2 border-gold-500 text-gold-500 font-bold hover:bg-gold-500 hover:text-white transition duration-500"
       >
         <slot name="buttonText" mdc-unwrap="p" />
-      </NuxtLink> -->
+      </NuxtLinkLocale> -->
     </div>
   </div>
 </template>

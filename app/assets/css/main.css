@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@theme { 
+    --color-gold-50: #f8f6ee;
+    --color-gold-100: #ede7d4;
+    --color-gold-200: #dcd0ac;
+    --color-gold-300: #c8b17c;
+    --color-gold-400: #bea066;
+    --color-gold-500: #a98449;
+    --color-gold-600: #916a3d;
+    --color-gold-700: #745134;
+    --color-gold-800: #634430;
+    --color-gold-900: #563a2d;
+    --color-gold-950: #311e17;
+    
+    --color-black: #1a1a1a;
+
+    --font-system-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-system-emoji: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-system-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+    --font-system-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+    --font-sans: "Noto Sans", var(--font-system-ui), var(--font-system-emoji);
+    --font-serif: "Noto Serif", var(--font-system-serif), var(--font-system-emoji);
+    --font-sans-display: "Noto Sans Display", var(--font-system-ui), var(--font-system-emoji);
+    --font-mono: "Noto Sans Mono", var(--font-system-mono), var(--font-system-emoji);
+    --font-serif-display: "Noto Serif Display", var(--font-system-serif), var(--font-system-emoji);
+}
+
+body {
+    @apply font-sans text-black font-light;
+}
+
+h1, h2, h3, h4, h5, h6 { 
+    @apply font-serif font-bold;
+}
+
+h1 { 
+    @apply text-4xl/8 mt-12 mb-2
+}
+
+h2 {
+    @apply text-3xl/8 mt-8 mb-2
+} 
+
+h3 {
+    @apply text-2xl/8 mt-6 mb-1
+} 
+
+h4 {
+    @apply text-xl/8 mt-4 mb-1
+} 
+
+h5 {
+    @apply text-lg/8 mt-2 mb-0 
+} 
+
+h6 {
+    @apply text-base/8 mt-2 mb-0
+} 
+
+
+/* Anchor */
+a { 
+    @apply transition-all text-gold-400 font-bold;
+
+    &:hover {
+        @apply text-gold-500;
+    }
+}
+
+
+/* Quote */
+blockquote { 
+    @apply border-l-gold-400;
+}
+
+
+/* List */
+ul {
+    @apply list-disc list-inside;  
+
+    li::marker { 
+        @apply text-gold-400;
+    }    
+}
+
+
+/* Table */
+table { 
+    @apply border-collapse w-full mb-8;
+
+    thead {
+        th {
+            @apply border-b border-gold-400 p-2 text-left;
+        }
+    }
+
+    tbody {
+        tr { 
+            td {
+                @apply border-y border-gold-400 p-2 text-left;
+            }
+        }
+    }
+}
+
+
+/* divider */
+
+hr {
+    @apply border-t border-gold-400 my-12;
+}

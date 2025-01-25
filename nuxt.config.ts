@@ -1,8 +1,48 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import tailwindcss from '@tailwindcss/vite';
+import eslintPlugin from 'vite-plugin-eslint';
+
 export default defineNuxtConfig({
-  modules: ['@nuxt/content','@nuxtjs/i18n', '@nuxt/fonts'],
+  modules: [
+    '@nuxt/content',
+    '@nuxtjs/i18n',
+    '@nuxt/fonts',
+    '@nuxt/image',
+    '@nuxt/eslint',
+  ],
+
+  content: {
+    renderer: {
+      anchorLinks: false
+    },
+  },
+
   fonts: {
-    families: [{ name: 'Noto Sans', provider: 'google' }],
+    experimental: {
+      processCSSVariables: true,
+    },
+    families: [
+      {
+        name: 'Noto Sans',
+        provider: 'google',
+      },
+      {
+        name: 'Noto Serif',
+        provider: 'google',
+      },
+      {
+        name: 'Noto Sans Display',
+        provider: 'google',
+      },
+      {
+        name: 'Noto Sans Mono',
+        provider: 'google',
+      },
+      {
+        name: 'Noto Serif Display',
+        provider: 'google',
+      }
+    ],
   },
   devtools: { enabled: true },
   future: {
@@ -17,4 +57,12 @@ export default defineNuxtConfig({
     strategy: 'prefix_except_default',
     defaultLocale: 'en',
   },
+  vite: {
+    plugins: [tailwindcss(), eslintPlugin()],
+  },
+  eslint: {
+    // options here
+  },
+
+  css: ['~/assets/css/main.css'],
 });
