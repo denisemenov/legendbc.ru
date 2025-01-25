@@ -17,11 +17,12 @@
     "@nuxtjs/i18n": "latest",
     "@tailwindcss/vite": "latest",
     "nuxt": "latest",
+    "photoswipe": "latest",
     "tailwindcss": "latest",
     "vue": "latest",
     "vue-router": "latest"
   },
-  "devDependencies": {  
+  "devDependencies": {
     "sass-embedded": "latest"
   }
 }

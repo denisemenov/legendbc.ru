@@ -1,49 +1,44 @@
 ---
-title: 'Главная страница'
-description: 'Пример использования кастомных компонентов Grid и Column'
+title: 'Страница'
+description: 'Пример использования'
 ---
 
 # Добро пожаловать!
 
-::btn{blank="true" block="true" href="/price" }  
- Нажмите здесь  
-::
-
-<hr/>
-
-::grid{:cols='{"mobile":1,"tablet":2,"desktop":3}'}  
- :::column  
- **Колонка 1**  
- Содержимое.  
- :::  
- :::column  
- **Колонка 2**  
- Содержимое.  
- :::  
- :::column  
- **Колонка 3**  
- Содержимое.  
- :::  
-::
-
-<hr/>
-
-::grid{:cols='{"mobile":1,"tablet":2,"desktop":4}'}
+::grid{:cols='{"mobile":1,"tablet":2,"desktop":3}'}
 :::column  
- ![Трибуны](/images/tv_1.jpg)
+::img-lightbox
+---
+gallery: first
+aspect-ratio: square
+---
+
+![Трибуны](/images/tv_1.jpg)
+::
 :::
 
 :::column
+::img-lightbox
+---
+gallery: first
+aspect-ratio: square
+---
+
 ![TV-зона](/images/tv_2.jpg)
+::
 :::
 
 :::column
+::img-lightbox
+---
+gallery: first
+aspect-ratio: square
+---
+
 ![Проекционный экран](/images/tv_3.jpg)
+::
 :::
 
-:::column
-::image{src="/images/tv_3.jpg"}
-Проекционный экран
 ::
-:::
-::
+
+

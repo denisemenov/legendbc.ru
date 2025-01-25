@@ -1,6 +1,6 @@
 <template>
   <div
-    class="grid gap-4"
+    class="grid gap-4 my-4"
     :class="gridClasses"
   >
     <slot unwrap="p" />

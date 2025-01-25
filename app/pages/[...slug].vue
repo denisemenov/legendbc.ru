@@ -29,7 +29,7 @@
 </script>
 
 <template>
-  <main class="prose prose-stone max-w-3xl mx-auto my-8">
+  <main class="prose prose-stone max-w-3xl mx-auto mt-8 mb-24">
     <ContentRenderer
       v-if="page"
       :value="page"
