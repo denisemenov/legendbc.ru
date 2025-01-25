@@ -2,32 +2,26 @@
 title: Цены
 description: Стоимость услуг в бильярдном клубе Легенда
 ---
- 
+
 ::heading  
 Кухня и бар
 
 #description  
 У нас есть чем хорошо подкрепиться
-:: 
- 
-
-::btn{blank="true" href="https://legend.intouch-menu.ru/"}
-  Открыть электронное меню
 ::
 
+::btn{blank="true" href="https://legend.intouch-menu.ru/"}
+Открыть электронное меню
+::
 
 ---
-
 
 ::heading  
 Залы и столы
 
 #description  
 Мы создаем идеальные условия для игры в бильярд
-:: 
- 
-
-
+::
 
 #### Русский бильярд
 

@@ -17,14 +17,14 @@
 </template>
 
 <script lang="ts" setup>
-interface Props {
-  // title: string;
-  backgroundImage?: string;
-}
+  interface Props {
+    // title: string;
+    backgroundImage?: string;
+  }
 
-withDefaults(defineProps<Props>(), {
-  backgroundImage: '/images/slide_1.jpg',
-});
+  withDefaults(defineProps<Props>(), {
+    backgroundImage: '/images/slide_1.jpg',
+  });
 </script>
 
 <style lang="scss"></style>

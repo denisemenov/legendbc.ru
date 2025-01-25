@@ -1,18 +1,7 @@
 // @ts-check
 import withNuxt from './.nuxt/eslint.config.mjs';
-import json from '@eslint/json';
-import markdown from '@eslint/markdown';
 
 export default withNuxt({
-  plugins: {
-    json,
-    markdown,
-  },
-  // extends: [
-  //   'eslint:recommended',
-  //   'plugin:vue/vue3-recommended',
-  //   'prettier'
-  // ],
   files: ['**/*.vue', '**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx', '**/*.md'],
   ignores: ['**/*.css'],
   language: 'markdown/commonmark',

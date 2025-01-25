@@ -21,18 +21,7 @@
     "vue": "latest",
     "vue-router": "latest"
   },
-  "devDependencies": {
-    "@eslint/json": "latest",
-    "@eslint/markdown": "latest",
-    "@nuxt/eslint": "latest",
-    "eslint": "latest",
-    "eslint-config-prettier": "latest",
-    "eslint-plugin-prettier": "latest",
-    "eslint-plugin-vue": "latest",
-    "eslint-plugin-nuxt": "latest",
-    "prettier": "latest",
-    "sass-embedded": "latest",
-    "typescript": "latest",
-    "vite-plugin-eslint": "latest"
+  "devDependencies": {  
+    "sass-embedded": "latest"
   }
 }

@@ -1,11 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import tailwindcss from '@tailwindcss/vite';
-import eslintPlugin from 'vite-plugin-eslint';
-import json from '@eslint/json';
-import markdown from '@eslint/markdown';
 
 export default defineNuxtConfig({
-  modules: ['@nuxt/content', '@nuxtjs/i18n', '@nuxt/fonts', '@nuxt/image', '@nuxt/eslint'],
+  modules: ['@nuxt/content', '@nuxtjs/i18n', '@nuxt/fonts', '@nuxt/image'],
 
   content: {
     renderer: {
@@ -54,7 +51,7 @@ export default defineNuxtConfig({
     defaultLocale: 'en',
   },
   vite: {
-    plugins: [tailwindcss(), eslintPlugin()],
+    plugins: [tailwindcss()],
   },
   css: ['~/assets/css/main.css'],
 });

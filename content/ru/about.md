@@ -8,7 +8,7 @@ description: Описание бильярдного клуба Легенда
 
 #description  
 Клуб, который выбирают чемпионы
-:: 
+::
 
 Бильярдный клуб "Легенда" - это:
 
@@ -22,13 +22,11 @@ description: Описание бильярдного клуба Легенда
 - Опытные инструкторы
 - Удобное расположение
 
-
-
 ### Бильярдный зал
 
 В нашем клубе установлено 17 столов: 12 столов для русского бильярда в общем зале, 1 стол в TV-зоне, 2 стола в отдельных VIP-залах и 2 стола для американского пула.
 
-::gallery{:images='[{ "src": "/images/hall_1.jpg", "description": "Основной зал" }, { "src":"/images/hall_2.jpg","description": "Игровая зона" }, { "src": "/images/hall_3.jpg", "description": "Общий вид зала" }]'} 
+::gallery{:images='[{ "src": "/images/hall_1.jpg", "description": "Основной зал" }, { "src":"/images/hall_2.jpg","description": "Игровая зона" }, { "src": "/images/hall_3.jpg", "description": "Общий вид зала" }]'}
 ::
 
 ### Русский бильярд
@@ -41,21 +39,21 @@ description: Описание бильярдного клуба Легенда
 - Шары Aramith Premier 280g от мирового лидера
 - Лузы 70,5 -71mm
 
-::gallery{:images='[{ "src": "/images/billiard_1.jpg", "description": "Русский бильярд" }, {"src":"/images/billiard_2.jpg", "description": "Профессиональный стол" }, { "src": "/images/billiard_3.jpg","description": "Игровая зона" } ]'} 
+::gallery{:images='[{ "src": "/images/billiard_1.jpg", "description": "Русский бильярд" }, {"src":"/images/billiard_2.jpg", "description": "Профессиональный стол" }, { "src": "/images/billiard_3.jpg","description": "Игровая зона" } ]'}
 ::
 
 ### Американский пул
 
 Два отличнейших 9-ти футовых стола для американского пула.
 
-::gallery{:images='[{ "src": "/images/pool.jpg", "description": "Стол для пула" } ]'} 
+::gallery{:images='[{ "src": "/images/pool.jpg", "description": "Стол для пула" } ]'}
 ::
 
 ### TV-зона
 
 В бильярдном зале расположена TV-зона с высококачественным столом для русского бильярда, произведённым в знаменитой Мастерской "Левитин и Пушкарев" стоимостью более 3 000 000 ₽, и двухуровневыми трибунами для зрителей. Напротив стола расположен большой проектор для просмотра спортивных матчей. Игры в TV-зоне Вы можете смотреть не только воочию, но и online.
 
-::gallery{:images='[{ "src": "/images/tv_1.jpg", "description": "Трибуны" }, { "src": "/images/tv_2.jpg","description":"TV-зона" }, { "src": "/images/tv_3.jpg", "description": "Проекционный экран" } ]'} 
+::gallery{:images='[{ "src": "/images/tv_1.jpg", "description": "Трибуны" }, { "src": "/images/tv_2.jpg","description":"TV-зона" }, { "src": "/images/tv_3.jpg", "description": "Проекционный экран" } ]'}
 ::
 
 ### VIP-залы

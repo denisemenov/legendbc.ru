@@ -4,6 +4,9 @@
   </h1>
 
   <p class="font-sans-display font-light italic text-lg text-gold-500 mb-8 mx-auto text-center">
-    <slot mdc-unwrap="p" name="description" />
+    <slot
+      mdc-unwrap="p"
+      name="description"
+    />
   </p>
 </template>
