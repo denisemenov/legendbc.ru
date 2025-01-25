@@ -1,19 +1,15 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import tailwindcss from '@tailwindcss/vite';
 import eslintPlugin from 'vite-plugin-eslint';
+import json from '@eslint/json';
+import markdown from '@eslint/markdown';
 
 export default defineNuxtConfig({
-  modules: [
-    '@nuxt/content',
-    '@nuxtjs/i18n',
-    '@nuxt/fonts',
-    '@nuxt/image',
-    '@nuxt/eslint',
-  ],
+  modules: ['@nuxt/content', '@nuxtjs/i18n', '@nuxt/fonts', '@nuxt/image', '@nuxt/eslint'],
 
   content: {
     renderer: {
-      anchorLinks: false
+      anchorLinks: false,
     },
   },
 
@@ -41,7 +37,7 @@ export default defineNuxtConfig({
       {
         name: 'Noto Serif Display',
         provider: 'google',
-      }
+      },
     ],
   },
   devtools: { enabled: true },
@@ -60,9 +56,5 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss(), eslintPlugin()],
   },
-  eslint: {
-    // options here
-  },
-
   css: ['~/assets/css/main.css'],
 });

@@ -7,29 +7,32 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "lint": "eslint",
-    "format": "prettier .  --write"
+    "lint": "eslint .",
+    "format": "prettier . --write"
   },
   "dependencies": {
     "@nuxt/content": "https://pkg.pr.new/@nuxt/content@3006",
-    "@nuxt/fonts": "^0.10.3",
-    "@nuxt/image": "1.9.0",
+    "@nuxt/fonts": "latest",
+    "@nuxt/image": "latest",
     "@nuxtjs/i18n": "latest",
-    "@tailwindcss/vite": "^4.0.0",
+    "@tailwindcss/vite": "latest",
     "nuxt": "latest",
-    "tailwindcss": "^4.0.0",
+    "tailwindcss": "latest",
     "vue": "latest",
     "vue-router": "latest"
   },
   "devDependencies": {
-    "@nuxt/eslint": "^0.7.5",
-    "eslint": "^9.19.0",
-    "eslint-config-prettier": "^10.0.1",
-    "eslint-plugin-prettier": "^5.2.3",
-    "eslint-plugin-vue": "9.32.0",
-    "prettier": "3.4.2",
+    "@eslint/json": "latest",
+    "@eslint/markdown": "latest",
+    "@nuxt/eslint": "latest",
+    "eslint": "latest",
+    "eslint-config-prettier": "latest",
+    "eslint-plugin-prettier": "latest",
+    "eslint-plugin-vue": "latest",
+    "eslint-plugin-nuxt": "latest",
+    "prettier": "latest",
     "sass-embedded": "latest",
-    "typescript": "^5.7.3",
-    "vite-plugin-eslint": "^1.8.1"
+    "typescript": "latest",
+    "vite-plugin-eslint": "latest"
   }
 }
