@@ -3,7 +3,7 @@
     class="flex flex-col"
     :class="columnClass"
   >
-    <slot unwrap="p" />
+    <slot mdc-unwrap="p" />
   </div>
 </template>
 

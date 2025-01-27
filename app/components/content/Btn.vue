@@ -9,7 +9,7 @@
         block && 'w-full',
       ]"
     >
-      <slot unwrap="p" />
+      <slot mdc-unwrap="p" />
     </NuxtLinkLocale>
   </div>
 </template>
@@ -20,7 +20,7 @@
   /**
    * Пропы компонента:
    * - href: string | undefined — адрес ссылки
-   * - blank: string — если есть хоть что-то в пропе, то target="_blank" и rel="noopener noreferrer string"
+   * - blank: string — если есть хоть что-то в пропе, то target="_blank" и rel="noopener noreferrer nofollow"
    * - block: boolean — если есть хоть что-то в пропе, то занимает 100% ширины w-full
    */
   const props = defineProps<{

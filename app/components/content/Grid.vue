@@ -3,7 +3,7 @@
     class="grid gap-4 my-4"
     :class="gridClasses"
   >
-    <slot unwrap="p" />
+    <slot mdc-unwrap="p" />
   </div>
 </template>
 

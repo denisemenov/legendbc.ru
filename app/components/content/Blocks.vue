@@ -5,7 +5,7 @@
   >
     <div
       class="flex flex-col w-full"
-      :class="{ 'lg:w-1/2': image }"
+      :class="{ 'lg:w-1/2': image || yamap }"
     >
       <div
         class="flex flex-col items-center justify-center h-full p-4 md:p-8 bg-stone-100 hover:bg-gold-100 transition-colors duration-300 text-center"
@@ -22,14 +22,17 @@
       </div>
     </div>
     <div
-      v-if="image"
-      class="w-full lg:w-1/2 min-h-120 md:min-h-140 lg:min-h-160 3xl:min-h-240 relative"
+      v-if="image || yamap"
+      class="w-full lg:w-1/2 h-full min-h-120 md:min-h-140 lg:min-h-160 3xl:min-h-240 relative"
     >
       <img
+        v-if="image"
         :src="image"
         :alt="image"
         class="absolute inset-0 w-full h-full object-cover"
       />
+
+      <YaMap v-if="yamap" />
     </div>
   </div>
 </template>
@@ -38,6 +41,7 @@
   defineProps<{
     reversed?: string;
     image?: string;
+    yamap?: string;
   }>();
 </script>
 
