@@ -5,7 +5,7 @@
     class="grid grid-cols-2 md:grid-cols-3 gap-4"
   >
     <template v-if="images && images.length">
-      <a
+      <NuxtLink
         v-for="(image, i) in images"
         :key="i"
         :href="image.src"
@@ -21,11 +21,11 @@
           :alt="image.description"
           class="inset-0 w-full h-full object-cover m-0"
         />
-      </a>
+      </NuxtLink>
     </template>
 
     <template v-else>
-      <a
+      <NuxtLink
         v-for="(image, i) in slotImages"
         :key="i"
         :href="image.src"
@@ -43,7 +43,7 @@
             class="absolute inset-0 w-full h-full object-cover m-0"
           />
         </div>
-      </a>
+      </NuxtLink>
     </template>
   </div>
 </template>
@@ -71,7 +71,6 @@
 
   onMounted(async () => {
     if (import.meta.client && galleryRef.value) {
-      // Handle slot images
       const imgs = galleryRef.value.querySelectorAll('img');
       for (const img of Array.from(imgs)) {
         const imgData: GalleryImage = {
@@ -79,7 +78,6 @@
           description: img.getAttribute('alt') || '',
         };
 
-        // Get image dimensions
         const loadImg = new Image();
         await new Promise((resolve) => {
           loadImg.onload = () => {
@@ -93,11 +91,9 @@
         slotImages.value.push(imgData);
       }
 
-      // Remove original images
       const paragraph = galleryRef.value.querySelector('p');
       if (paragraph) paragraph.remove();
 
-      // Initialize PhotoSwipe
       lightbox = new PhotoSwipeLightbox({
         gallery: '#' + galleryId,
         children: 'a',

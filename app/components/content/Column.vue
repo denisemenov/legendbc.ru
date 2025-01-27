@@ -3,20 +3,12 @@
     class="flex flex-col"
     :class="columnClass"
   >
-    <slot
-      :use="$slots.default"
-      unwrap="p"
-    />
+    <slot unwrap="p" />
   </div>
 </template>
 
 <script setup lang="ts">
   import { computed } from 'vue';
-
-  defineSlots<{
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    default(): any;
-  }>();
 
   const props = defineProps<{
     span?: number;

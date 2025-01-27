@@ -48,3 +48,9 @@ _Со вторника по пятницу после 2:00 и в субботу 
 [Instagram](https://instagram.com/legendbcru)
 :::
 ::
+
+---
+
+::btn{href="/requisites"}
+Реквизиты
+::

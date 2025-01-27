@@ -10,11 +10,6 @@
 <script setup lang="ts">
   import { computed } from 'vue';
 
-  defineSlots<{
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    default(): any;
-  }>();
-
   interface Columns {
     mobile?: 1 | 2 | 3 | 4 | 5 | 6;
     tablet?: 1 | 2 | 3 | 4 | 5 | 6;

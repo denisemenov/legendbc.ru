@@ -28,7 +28,12 @@
         </p>
 
         <p>
-          <NuxtLinkLocale to="tel:+79166244545"> +7 916 624 4545 </NuxtLinkLocale>
+          <NuxtLink
+            to="tel:+79166244545"
+            class="hover:text-gold-500 transition-colors"
+          >
+            +7 916 624 4545
+          </NuxtLink>
         </p>
 
         <p>
@@ -37,14 +42,14 @@
         </p>
 
         <div class="space-y-1">
-          <NuxtLinkLocale
+          <NuxtLink
             v-for="link in socials"
             :key="link.name"
             :to="link.url"
-            class="block"
+            class="block hover:text-gold-500 transition-colors"
           >
             {{ link.name }}
-          </NuxtLinkLocale>
+          </NuxtLink>
         </div>
       </div>
     </div>
@@ -60,11 +65,11 @@
     }
   }
 
-  // interface YMaps {
-  //   Map: any;
-  //   Placemark: any;
-  //   ready: (callback: () => void) => void;
-  // }
+  interface YMaps {
+    Map: any;
+    Placemark: any;
+    ready: (callback: () => void) => void;
+  }
 
   declare const ymaps: YMaps;
 
@@ -86,7 +91,6 @@
   ];
 
   onMounted(() => {
-    // Wait for Yandex Maps API to load
     if (window.ymaps) {
       window.ymaps.ready(initMap);
     }
@@ -116,13 +120,12 @@
         iconImageHref: '/assets/placeholder.svg',
         iconImageSize: [56, 56],
         iconImageOffset: [-28, -56],
-      },
+      }
     );
 
     myMap.geoObjects.add(placemark);
     placemark.balloon.open();
 
-    // Add zoom control
     myMap.controls.add('zoomControl', {
       float: 'right',
     });

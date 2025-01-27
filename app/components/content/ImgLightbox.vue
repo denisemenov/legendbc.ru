@@ -37,7 +37,7 @@
   const props = defineProps<Props>();
   const container = ref<HTMLElement | null>(null);
   const imageInfo = ref<ImageInfo | null>(null);
-  const aspectClass = computed(() => props.aspectRatio === 'square' ? 'aspect-square' : '');
+  const aspectClass = computed(() => (props.aspectRatio === 'square' ? 'aspect-square' : ''));
   let lightbox: any = null;
 
   onMounted(async () => {
@@ -52,7 +52,7 @@
             width: loadImage.width,
             height: loadImage.height,
             src: img.src,
-            alt: img.alt || 'No alt text', 
+            alt: img.alt || 'No alt text',
           };
 
           if (link) {
@@ -64,6 +64,7 @@
           lightbox = new PhotoSwipeLightbox({
             gallery: '#' + props.gallery,
             children: 'a',
+            showHideAnimationType: 'fade',
             pswpModule: () => import('photoswipe'),
           });
           lightbox.init();
@@ -82,7 +83,7 @@
 </script>
 
 <style scoped>
-:deep(img) {
-  @apply object-cover w-full h-full;
-}
+  :deep(img) {
+    @apply object-cover w-full h-full;
+  }
 </style>

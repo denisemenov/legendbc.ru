@@ -1,36 +1,52 @@
 <template>
-  <div class="w-full md:w-1/2">
+  <div
+    class="flex flex-col lg:flex-row gap-4"
+    :class="{ 'lg:flex-row-reverse': reversed }"
+  >
     <div
-      class="flex flex-col items-center justify-center min-h-[600px] p-4 md:p-[50px] bg-stone-100 hover:bg-gold-100 transition-colors duration-300 text-center"
+      class="flex flex-col w-full"
+      :class="{ 'lg:w-1/2': image }"
     >
-      <h2 class="text-4xl font-serif font-bold tracking-wide mb-1">
-        <slot
-          name="title"
-          mdc-unwrap="p"
-        />
-      </h2>
-
-      <h5 class="text-gold-500 font-serif italic mb-8">
-        <slot
-          name="subtitle"
-          mdc-unwrap="p"
-        />
-      </h5>
-
-      <div class="mb-1">
-        <slot mdc-unwrap="p" />
-      </div>
-      <!-- <NuxtLinkLocale
-        v-if="$slots.buttonLink"
-        :to="$slots.buttonLink"
-        class="inline-block mt-8 px-8 py-4 border-2 border-gold-500 text-gold-500 font-bold hover:bg-gold-500 hover:text-white transition duration-500"
+      <div
+        class="flex flex-col items-center justify-center h-full p-4 md:p-8 bg-stone-100 hover:bg-gold-100 transition-colors duration-300 text-center"
       >
-        <slot name="buttonText" mdc-unwrap="p" />
-      </NuxtLinkLocale> -->
+        <slot
+          name="header"
+          mdc-unwrap="p"
+        />
+        <slot />
+        <slot
+          name="footer"
+          mdc-unwrap="p"
+        />
+      </div>
+    </div>
+    <div
+      v-if="image"
+      class="w-full lg:w-1/2 min-h-120 md:min-h-140 lg:min-h-160 3xl:min-h-240 relative"
+    >
+      <img
+        :src="image"
+        :alt="image"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
     </div>
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+  defineProps<{
+    reversed?: string;
+    image?: string;
+  }>();
+</script>
 
-<style lang="scss"></style>
+<style lang="scss">
+  .text-center {
+    ul {
+      text-align: left;
+      margin: 0 auto;
+      width: fit-content;
+    }
+  }
+</style>

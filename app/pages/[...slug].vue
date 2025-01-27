@@ -16,8 +16,13 @@
     },
     {
       watch: [locale],
-    },
+    }
   );
+
+  const classes = computed(() => ({
+    'gap-4 flex flex-col w-full': true,
+    'prose prose-stone mx-auto max-w-3xl mt-8 mb-24': slug.value !== '/',
+  }));
 
   if (!page.value) {
     throw createError({
@@ -29,10 +34,10 @@
 </script>
 
 <template>
-  <main class="prose prose-stone max-w-3xl mx-auto mt-8 mb-24">
-    <ContentRenderer
-      v-if="page"
-      :value="page"
-    />
-  </main>
+  <ContentRenderer
+    v-if="page"
+    tag="main"
+    :value="page"
+    :class="classes"
+  />
 </template>

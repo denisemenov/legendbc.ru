@@ -5,29 +5,17 @@
       :target="computedTarget"
       :rel="computedRel"
       :class="[
-        'flex items-center justify-center px-4 py-2 no-underline border-2 border-gold-400 text-gold-400 font-bold transition-all duration-300 hover:bg-gold-400 hover:text-white',
+        'flex items-center justify-center px-8 py-4 no-underline border-2 border-gold-400 text-gold-400 font-bold transition-all duration-300 hover:bg-gold-400 hover:text-white',
         block && 'w-full',
       ]"
     >
-      <slot
-        :use="$slots.default"
-        unwrap="p"
-      />
+      <slot unwrap="p" />
     </NuxtLinkLocale>
   </div>
 </template>
 
 <script setup lang="ts">
   import { computed } from 'vue';
-
-  /**
-   * Слоты:
-   * - default: используется для кастомного HTML / Markdown-контента внутри кнопки
-   */
-  defineSlots<{
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    default?: any;
-  }>();
 
   /**
    * Пропы компонента:
@@ -41,15 +29,8 @@
     block?: string;
   }>();
 
-  /**
-   * Вычисляем значения target и rel
-   * - Если blank === true → target="_blank", rel="noopener noreferrer nofollow"
-   * - Иначе, target="_self", rel не задан
-   */
   const computedTarget = computed(() => (props.blank ? '_blank' : undefined));
   const computedRel = computed(() => (props.blank ? 'noopener noreferrer nofollow' : undefined));
 </script>
 
-<style scoped lang="scss">
-  /* При желании можно добавить дополнительные стили */
-</style>
+<style scoped lang="scss"></style>

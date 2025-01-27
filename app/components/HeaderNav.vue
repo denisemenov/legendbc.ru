@@ -6,7 +6,7 @@
           <HeaderLogo />
 
           <div class="mt-4 lg:mt-2">
-            <NuxtLinkLocale
+            <NuxtLink
               to="tel:+79166244545"
               class="flex justify-center items-center hover:opacity-80 transition"
             >
@@ -16,7 +16,7 @@
                 class="w-4 h-4 block"
               />
               <span class="text-white font-bold text-base tracking-tight ml-1">+7&nbsp;916&nbsp;624&nbsp;4545</span>
-            </NuxtLinkLocale>
+            </NuxtLink>
           </div>
         </div>
 
