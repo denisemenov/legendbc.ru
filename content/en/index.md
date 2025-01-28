@@ -84,36 +84,3 @@ Welcome!
 Наше оборудование
 :::
 ::
-
-::blocks{reversed="true" yamap="true"}
-#header
-:::heading
-Контакты
-
-#description
-Нас легко найти и мы умеем общаться любым удобным вам способом
-:::
-
-#default
-Мы находимся в 2 минутах ходьбы от м. Волоколамская:  
-Пятницкое ш., д. 3,  
-ТЦ "Пятница", 2 этаж
-
-<br>
-
-ПН - ЧТ 12:00 - 02:00  
-ПТ - ВС 12:00 - 06:00
-
-<br>
-
-[+7 916 624 4545](tel:+79166244545)
-
-<br>
-
-[Vk](https://vk.com/legendbcru)
-
-[Facebook](https://facebook.com/legendbcru)
-
-[Instagram](https://instagram.com/legendbcru)
-
-::

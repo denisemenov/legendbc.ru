@@ -10,10 +10,10 @@
     <div
       class="w-full md:w-1/2 flex flex-col items-center justify-center min-h-[600px] p-4 md:p-10 bg-stone-100 hover:bg-gold-100 transition-colors duration-300 text-center"
     >
-      <h2 class="text-4xl font-serif font-bold tracking-wide mb-1">Контакты</h2>
-      <h5 class="text-gold-500 font-serif italic mb-8">
+      <h2 class="font-serif font-extrabold text-4xl mt-12 mx-auto text-center">Контакты</h2>
+      <p class="font-sans-display font-light italic text-lg text-gold-500 mb-8 mx-auto text-center">
         Нас легко найти и мы умеем общаться любым удобным вам способом
-      </h5>
+      </p>
 
       <div class="space-y-4">
         <p>

@@ -45,36 +45,41 @@
           class="fixed lg:relative top-0 left-0 w-full h-screen lg:h-auto bg-white lg:bg-transparent lg:bg-none pt-[200px] lg:pt-0 text-center lg:text-right transform transition-transform duration-300"
           :class="[isMenuOpen ? 'translate-x-0' : 'translate-x-full lg:translate-x-0']"
         >
-          <div class="flex flex-col lg:flex-row items-center lg:items-end justify-end space-y-4 lg:space-y-0">
+          <div class="flex flex-col lg:flex-row items-center lg:items-end justify-end gap-4">
             <NuxtLinkLocale
               v-for="link in navLinks"
               :key="link.to"
               :to="link.to"
-              class="block lg:inline-block px-2 lg:px-4 py-4 lg:py-0 text-stone-900 lg:text-white! text-base xl:text-lg hover:text-gold-500 lg:hover:text-stone-500! transition-colors font-semibold"
+              class="p-2 font-semibold lg:text-white! lg:hover:text-slate-200! transition"
             >
               {{ link.text }}
             </NuxtLinkLocale>
+
+            <div class="w-full lg:w-0.5 h-px lg:h-10 bg-gold-200 lg:bg-white my-4 lg:my-0 lg:mx-4"></div>
+
+            <div class="flex flex-row items-center justify-center lg:justify-end gap-4">
+              <SwitchLocalePathLink
+                v-for="lang of locales"
+                :locale="lang.code"
+                @click="setLocale(lang.code)"
+                class="p-2 font-semibold lg:text-white! lg:hover:text-slate-200! transition uppercase"
+                :class="{ 'text-gold-300!': currentLocale === lang.code }"
+              >
+                {{ lang.code }}
+              </SwitchLocalePathLink>
+            </div>
           </div>
         </nav>
-
-        <div class="flex flex-row items-center justify-center gap-2">
-          <button
-            v-for="lang of locales"
-            :key="lang.code"
-            @click="setLocale(lang.code)"
-          >
-            ({{ lang.code }})
-          </button>
-        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-  import { ref } from 'vue';
-  const { setLocale, locales } = useI18n();
+  import { ref, computed } from 'vue';
+  const { setLocale, locales, locale } = useI18n();
 
+  const currentLocale = computed(() => locale.value);
   const isMenuOpen = ref(false);
 
   const navLinks = [

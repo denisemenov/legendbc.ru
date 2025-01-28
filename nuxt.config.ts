@@ -45,10 +45,14 @@ export default defineNuxtConfig({
   i18n: {
     locales: [
       { code: 'en', name: 'English', language: 'en-US' },
-      { code: 'ru', name: 'Russian', language: 'ru-RU' },
+      { code: 'ru', name: 'Русский', language: 'ru-RU' },
     ],
-    strategy: 'prefix_except_default',
-    defaultLocale: 'en',
+    strategy: 'prefix_and_default',
+    defaultLocale: 'ru',
+    detectBrowserLanguage: {
+      redirectOn: 'root',
+      alwaysRedirect: true,
+    },
   },
   vite: {
     plugins: [tailwindcss()],
