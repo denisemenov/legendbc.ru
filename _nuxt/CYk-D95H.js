@@ -1,1 +1,0 @@
-import{ar as e,as as r}from"./C5pPZfiS.js";const o=()=>({legacy:!1,locale:"ru",defaultLocale:"ru",messages:{en:e,ru:r},fallbackLocale:"ru",datetimeFormats:{en:{short:{year:"numeric",month:"short",day:"numeric"}},ru:{short:{year:"numeric",month:"short",day:"numeric"}}}});export{o as default};
