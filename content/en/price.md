@@ -3,10 +3,10 @@ title: Prices
 description: Services pricing at Legend Billiards Club
 ---
 
-::heading  
+::heading
 Kitchen and Bar
 
-#description  
+#description
 We have great food to keep you energized
 ::
 
@@ -16,10 +16,10 @@ Open online menu
 
 ---
 
-::heading  
+::heading
 Halls and Tables
 
-#description  
+#description
 We create perfect conditions for playing billiards
 ::
 
@@ -67,12 +67,12 @@ We create perfect conditions for playing billiards
 | 12:00 - 02:00 | 1200 ₽  |
 | 02:00 - 12:00 | 1700 ₽  |
 
-_**This information does not constitute a public offer.**_
+***This information does not constitute a public offer.***
 
-_You can find the current price list at the Consumer Corner stand or at the club bar._
+*You can find the current price list at the Consumer Corner stand or at the club bar.*
 
-_All prices are per hour of game time._
+*All prices are per hour of game time.*
 
-_Holiday rates are the same as weekend rates!_
+*Holiday rates are the same as weekend rates!*
 
-_From Tuesday to Friday after 2:00 AM and on Saturday and Sunday after 6:00 AM, we are open until the last guest leaves._
+*From Tuesday to Friday after 2:00 AM and on Saturday and Sunday after 6:00 AM, we are open until the last guest leaves.*
