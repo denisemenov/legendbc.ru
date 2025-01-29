@@ -1,23 +1,23 @@
 ---
-title: Главная страница
-description: Бильярдный клуб Легенда в Санкт-Петербурге
+title: Home Page
+description: Legend Billiards Club in Saint Petersburg
 ---
 
 ::blocks{reversed="true" image="/images/IMG_0962.jpg"}
 #header
 :::heading
-Клуб легендарных игроков
+Club of Legendary Players
 
 #description
-Наш многолетний опыт для вашего наслаждения игрой
+Our years of experience for your gaming pleasure
 :::
 
 #default
-Бильярдный клуб "Легенда" создан легендарными в бильярдном мире личностями, которые вложили все свои знания и весь накопленный опыт в создание по-настоящему профессионального клуба! За созданием клуба стоят знаковые фигуры бильярдного спорта: **Евгений Сталев**, **Сергей Бауров** и **Сергей Крыжановский**. Окажитесь в обществе чемпионов мира по русскому бильярду, играя за соседним с ними столом.
+The "Legend" Billiards Club was created by legendary figures in the billiards world who invested all their knowledge and accumulated experience in creating a truly professional club! Behind the creation of the club are iconic figures in billiards sport: **Evgeny Stalev**, **Sergey Baurov**, and **Sergey Kryzhanovsky**. Find yourself in the company of Russian billiards world champions, playing at a table next to them.
 
 #footer
 :::btn{href="/contacts" class="mb-8 mt-8"}
-Как нас найти
+How to find us
 :::
 ::
 
@@ -25,24 +25,24 @@ description: Бильярдный клуб Легенда в Санкт-Пете
 #header
 
 :::heading
-Легендарное качество
+Legendary Quality
 
 #description
-Бескомпромиссный высший класс
+Uncompromising premium class
 :::
 
 #default
-Оцените игровые качества столов высшего класса, изготовленные легендарной компанией E.St:
+Experience the playing qualities of premium-class tables manufactured by the legendary E.St company:
 
-- Усовершенствованная металлоконстурукция
-- Итальянские плиты Carlo Jufra 45mm
-- Сукно Iwan Simonis 760 от мирового лидера
-- Шары Aramith Premier 280g от мирового лидера
-- Лузы 70,5 -71mm
+- Advanced metal construction
+- Carlo Jufra 45mm Italian slate
+- Iwan Simonis 760 cloth from the world leader
+- Aramith Premier 280g balls from the world leader
+- Pockets 70.5-71mm
 
 #footer
 :::btn{href="/about" class="mb-8 mt-8"}
-Наше оборудование
+Our Equipment
 :::
 ::
 
@@ -50,18 +50,18 @@ description: Бильярдный клуб Легенда в Санкт-Пете
 #header
 
 :::heading
-Легендарный сервис
+Legendary Service
 
 #description
-Всё для вашего комфорта
+Everything for your comfort
 :::
 
 #default
-Отдыхайте в VIP-зале, наблюдайте за онлайн-трансляциями в TV-зоне с двухуровневыми трибунами для просмотра спортивных матчей на большом проекционном экране, наслаждайтесь нашим бомбическим баром, вкуснейшими блюдами от нашего шеф-повара и эксклюзивным пивом Хамовники.
+Relax in our VIP room, watch live streams in the TV zone with two-level tribunes for viewing sports matches on a large projection screen, enjoy our amazing bar, delicious dishes from our chef, and exclusive Khamovniki beer.
 
 #footer
 :::btn{href="/price" class="mb-8 mt-8"}
-Посмотреть меню
+View Menu
 :::
 ::
 
@@ -69,18 +69,18 @@ description: Бильярдный клуб Легенда в Санкт-Пете
 #header
 
 :::heading
-Легендарные мероприятия
+Legendary Events
 
 #description
-Какой-то мощный подзаголовок
+Some powerful subheading
 :::
 
 #default
-Планируете проведение корпоратива или турнира? Хотите отметить день рождения, юбилей, встречу старых друзей или любой другой праздник?
+Planning a corporate event or tournament? Want to celebrate a birthday, anniversary, meet with old friends, or any other celebration?
 Welcome!
 
 #footer
 :::btn{href="/about" class="mb-8 mt-8"}
-Наше оборудование
+Our Equipment
 :::
 ::

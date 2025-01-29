@@ -1,45 +1,47 @@
 ---
-title: Контакты
-description: Контакты бильярдного клуба Легенда
+title: Contacts
+description: Contacts of Legend billiard club
 ---
 
 ::heading  
-Приезжайте к нам
+Visit us
 
 #description  
-Нас легко найти и мы умеем общаться любым удобным вам способом
+We're easy to find and we can communicate in any way convenient for you
 ::
 
 ::grid{:cols='{"mobile":1,"tablet":2,"desktop":2}'}
 :::column
 
-#### Как добраться
+### How to find us
 
-_Мы находимся в 2 минутах ходьбы от&nbsp;м.&nbsp;Волоколамская:_ </br>
-Москва, Митино,</br>
-Пятницкое ш., д. 3,</br>
-ТЦ "Пятница", 2 этаж
+_We are located 2 minutes walk from&nbsp;Volokolamskaya&nbsp;metro&nbsp;station:_
+
+Moscow, Mitino,  
+Pyatnitskoe highway, 3,  
+"Pyatnitsa" Shopping Mall, 2nd floor
 :::
 
 :::column
 
-#### Режим работы
+### Opening hours
 
-ПН - ЧТ: 12:00 - 02:00</br>
-ПТ - ВС: 12:00 - 06:00</br>
-_Со вторника по пятницу после 2:00 и в субботу и воскресенье после 6:00 работаем до последнего гостя._
+MON - THU: 12:00 - 02:00  
+FRI - SUN: 12:00 - 06:00
+
+_From Tuesday to Friday after 2:00 AM and on Saturday and Sunday after 6:00 AM, we stay open until the last guest leaves._
 :::
 
 :::column
 
-#### Позвони нам
+### Call us
 
 [+7 916 624 4545](tel:+79166244545)
 :::
 
 :::column
 
-#### Подпишись на нас
+### Follow us
 
 [Vk](https://vk.com/legendbcru)
 
@@ -52,5 +54,5 @@ _Со вторника по пятницу после 2:00 и в субботу 
 ---
 
 ::btn{href="/requisites"}
-Реквизиты
+Requisites
 ::

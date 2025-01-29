@@ -25,8 +25,15 @@
   --font-sans-display: 'Noto Sans Display', var(--font-system-ui), var(--font-system-emoji);
   --font-mono: 'Noto Sans Mono', var(--font-system-mono), var(--font-system-emoji);
   --font-serif-display: 'Noto Serif Display', var(--font-system-serif), var(--font-system-emoji);
-  
+
   --breakpoint-3xl: 120rem;
+
+  --shadow-3xl: 0 35px 35px rgba(0, 0, 0, 0.25);
+  --shadow-block: 0 0px 8px 4px rgba(0, 0, 0, 0.25);
+}
+
+@view-transition {
+  navigation: auto;
 }
 
 body {
@@ -66,15 +73,6 @@ h6 {
   @apply text-base/8 mt-2 mb-0;
 }
 
-/* Anchor */
-a {
-  @apply transition-all text-gold-400 font-bold;
-
-  &:hover {
-    @apply text-gold-500;
-  }
-}
-
 /* Quote */
 blockquote {
   @apply border-l-gold-400;
@@ -111,5 +109,5 @@ table {
 /* divider */
 
 hr {
-  @apply border-t border-gold-400 my-12;
+  @apply border-t border-gold-400 my-8;
 }

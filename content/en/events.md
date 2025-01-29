@@ -1,36 +1,36 @@
 ---
-title: Корпоративные мероприятия
-description: Организация корпоративных мероприятий в бильярдном клубе Легенда
+title: Corporate Events
+description: Organizing corporate events at the Legend billiard club
 ---
 
-::heading  
-Лучший отдых с коллегами
+::heading
+Best recreation with colleagues
 
-#description  
-Идеальное место для вашего корпоратива
+#description
+Perfect venue for your corporate event
 ::
 
-Команда профессионалов организует для вас праздник с элементами тимбилдинга и спортивного соревнования.
+Our team of professionals will organize a celebration combining team building and sports competition elements.
 
-На этапе подготовки к мероприятию мы берем на себя работы по:
+During the event preparation phase, we handle:
 
-- Формированию программы и составлению сметы мероприятия
-- Подготовке индивидуального меню
-- Украшению зала в соответствии вашими пожеланиями
-- Полное закрытие клуба на период проведения вашего праздника!
+- Creating the program and cost estimate
+- Preparing custom menu options
+- Decorating the venue according to your preferences
+- Complete club closure for the duration of your event!
 
-### Больше, чем просто мероприятие
+### More than just an event
 
-Среди дополнительных услуг по организации корпоративного мероприятия, такие услуги как:
+Among the additional services for corporate event organization, we offer:
 
-- Организация и проведение корпоративного турнира по бильярду под руководством судей всероссийской и международной категории - включает в себя разработку регламента, тайминга и сетки турнира, а также изготовление эксклюзивных кубков, медалей, грамот, дипломов и прочей сувенирной продукции с логотипом компании
-- Организация и проведение мастер-классов по русскому бильярду, трюкового бильярда или матчевых встреч с участием мировых звезд русского бильярда, а также спаррингов с Чемпионами Мира, Европы и России
-- Проведение профессиональной фото- и видеосъемки мероприятия
-- Проведение увлекательной шоу-программы в исполнении нашего иллюзиониста
-- Освещение мероприятия в СМИ
-- Видеосъемка и запись на диск матчевых встреч, спаррингов и трюкового бильярда
-- Подготовка рекламных материалов
-- Обучение игре на русском бильярде для участников мероприятия
-- Трансфер до места проведения
+- Organization and hosting of corporate billiard tournaments under the supervision of national and international category referees - includes development of regulations, timing and tournament brackets, as well as production of exclusive cups, medals, certificates, diplomas and other branded merchandise with company logo
+- Organization and hosting of Russian billiard masterclasses, trick shot exhibitions or competitive matches featuring world-class Russian billiard stars, as well as sparring sessions with World, European and Russian Champions
+- Professional photo and video coverage of the event
+- Entertaining magic show performed by our illusionist
+- Media coverage of the event
+- Video recording and DVD production of matches, sparring sessions and trick shots
+- Preparation of promotional materials
+- Russian billiard training for event participants
+- Transfer service to the venue
 
-Наши менеджеры с удовольствием ответят на ваши вопросы и подберут для вас индивидуальную программу.
+Our managers will gladly answer your questions and create a customized program for you.

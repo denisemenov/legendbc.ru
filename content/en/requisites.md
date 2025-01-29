@@ -1,27 +1,27 @@
 ---
-title: Реквизиты
-description: Реквизиты бильярдного клуба Легенда
+title: Requisites
+description: Requisites of the Legend billiard club
 ---
 
-| Параметр                                        | Значение                                                                                              |
-| ----------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| Полное наименование организации                 | Общество с ограниченной ответственностью «Легенда №1»                                                 |
-| Юридический адрес                               | 125464, г. Москва, ул. Пятницкое шоссе, д.3                                                           |
-| Почтовый адрес                                  | 125464, г. Москва, ул. Пятницкое шоссе, д.3                                                           |
-| Телефоны                                        | +79262134246                                                                                          |
-| Ф.И.О. руководителя                             | Бауров Сергей Александрович, генеральный директор (Устав, Приказ о назначении генерального директора) |
-| Срок полномочий руководителя                    | Бессрочно                                                                                             |
-| Ф.И.О. главного бухгалтера                      | Бауров Сергей Александрович                                                                           |
-| Контактное лицо по договору/счету               | Морева Людмила Ивановна                                                                               |
-| Телефон и e-mail контактного лица               | +79037900646, <zoro73@mail.ru>                                                                        |
-| Контактное лицо по финансовым вопросам          | Морева Людмила Ивановна                                                                               |
-| Телефон контактного лица по финансовым вопросам | +79037900646                                                                                          |
-| ИНН                                             | 7733236240                                                                                            |
-| КПП                                             | 773301001                                                                                             |
-| ОГРН                                            | 1157746481023                                                                                         |
-| Дата ОГРН                                       | 28.05.2015                                                                                            |
-| ОКПО                                            | 45327230                                                                                              |
-| Р/С                                             | 40702810138000037696                                                                                  |
-| Банк                                            | ПАО «Сбербанк России» г. Москва                                                                       |
-| К/С                                             | 30101810400000000225                                                                                  |
-| БИК                                             | 044525225                                                                                             |
+| Parameter                          | Value                                                                                        |
+| --------------------------------- | -------------------------------------------------------------------------------------------- |
+| Full organization name            | Limited Liability Company "Legend №1"                                                         |
+| Legal address                     | 125464, Moscow, Pyatnitskoe highway, 3                                                       |
+| Postal address                    | 125464, Moscow, Pyatnitskoe highway, 3                                                       |
+| Phone numbers                     | +79262134246                                                                                 |
+| CEO full name                     | Baurov Sergey Aleksandrovich, General Director (Charter, Order on appointment of CEO)         |
+| CEO term of office                | Indefinite                                                                                   |
+| Chief accountant full name        | Baurov Sergey Aleksandrovich                                                                 |
+| Contract/invoice contact person    | Moreva Ludmila Ivanovna                                                                     |
+| Contact person phone and email    | +79037900646, <zoro73@mail.ru>                                                              |
+| Financial matters contact person   | Moreva Ludmila Ivanovna                                                                     |
+| Financial contact person phone    | +79037900646                                                                                |
+| TIN                              | 7733236240                                                                                   |
+| RRC                              | 773301001                                                                                    |
+| PSRN                             | 1157746481023                                                                                |
+| PSRN date                        | 28.05.2015                                                                                   |
+| OKPO                             | 45327230                                                                                     |
+| Settlement account               | 40702810138000037696                                                                        |
+| Bank                             | PJSC Sberbank of Russia, Moscow                                                              |
+| Correspondent account            | 30101810400000000225                                                                        |
+| BIC                              | 044525225                                                                                    |

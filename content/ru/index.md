@@ -46,6 +46,43 @@ description: Бильярдный клуб Легенда в Санкт-Пете
 :::
 ::
 
+::blocks
+::grid{:cols='{"mobile":1,"tablet":2,"desktop":4}' class="my-8 px-4 bg-gray-100"}
+:::column
+:::heading
+15
+#description
+столов для русского бильярда
+:::
+:::
+
+:::column
+:::heading
+2
+#description
+стола для американского пула
+:::
+:::
+
+:::column
+:::heading
+2
+#description
+VIP-зала
+:::
+:::
+
+:::column
+:::heading
+1
+#description
+TV-зона
+:::
+:::
+
+::
+::
+
 ::blocks{reversed="true" image="/images/IMG_0832.jpg"}
 #header
 

@@ -1,93 +1,93 @@
 ---
-title: Бильярдный клуб Легенда
-description: Описание бильярдного клуба Легенда
+title: Billiard Club Legend
+description: Description of the Billiard Club Legend
 ---
 
-::heading  
-Легендарный клуб
+::heading
+Legendary Club
 
-#description  
-Клуб, который выбирают чемпионы
+#description
+The club chosen by champions
 ::
 
 ::grid{:cols='{"mobile":1,"tablet":1,"desktop":2}'}
 :::column
-Бильярдный клуб "Легенда" - это:
+Billiard Club "Legend" offers:
 
-- 17 легендарных качественных столов
-- Уникальные VIP-залы
-- Неповторимая атмосфера чемпионов
+- 17 legendary quality tables
+- Unique VIP rooms
+- Unmatched championship atmosphere
 :::
 
 :::column
-Идеальные условия для игры в бильярд:
+Perfect conditions for billiards:
 
-- Профессиональное оборудование
-- Опытные инструкторы
-- Удобное расположение
+- Professional equipment
+- Experienced instructors
+- Convenient location
 :::
 ::
 
 <hr/>
 
-### Бильярдный зал
+### Billiard Hall
 
-В нашем клубе установлено 17 столов: 12 столов для русского бильярда в общем зале, 1 стол в TV-зоне, 2 стола в отдельных VIP-залах и 2 стола для американского пула.
+Our club features 17 tables: 12 Russian billiard tables in the main hall, 1 table in the TV zone, 2 tables in separate VIP rooms, and 2 American pool tables.
 
 ::gallery{id="hall" aspect-ratio="square" :cols='{"mobile":1,"tablet":2,"desktop":3}'}
-![Основной зал](/images/hall_1.jpg)
-![Игровая зона](/images/hall_2.jpg)
-![Общий вид зала](/images/hall_3.jpg)
+![Main Hall](/images/hall_1.jpg)
+![Gaming Area](/images/hall_2.jpg)
+![Hall Overview](/images/hall_3.jpg)
 ::
 
 <hr/>
 
-### Русский бильярд
+### Russian Billiards
 
-К Вашим услугам 15 столов высшего класса, изготовленные легендарной компанией E.St:
+At your service are 15 high-class tables manufactured by the legendary company E.St:
 
-- Усовершенствованная металлоконстурукция
-- Итальянские плиты Carlo Jufra 45mm
-- Сукно Iwan Simonis 760 от мирового лидера
-- Шары Aramith Premier 280g от мирового лидера
-- Лузы 70,5 -71mm
+- Enhanced metal construction
+- Carlo Jufra 45mm Italian slate
+- Iwan Simonis 760 cloth from the world leader
+- Aramith Premier 280g balls from the world leader
+- Pockets 70.5-71mm
 
 ::gallery{id="billiard" aspect-ratio="square" :cols='{"mobile":1,"tablet":2,"desktop":3}'}
-![Русский бильярд](/images/billiard_1.jpg)
-![Профессиональный стол](/images/billiard_2.jpg)
-![Игровая зона](/images/billiard_3.jpg)
+![Russian Billiards](/images/billiard_1.jpg)
+![Professional Table](/images/billiard_2.jpg)
+![Gaming Area](/images/billiard_3.jpg)
 ::
 
 <hr/>
 
-### Американский пул
+### American Pool
 
-Два отличнейших 9-ти футовых стола для американского пула.
+Two excellent 9-foot tables for American pool.
 
 ::gallery{id="pool" aspect-ratio="video" :cols='{"mobile":1,"tablet":2,"desktop":1}'}
-![Стол для пула](/images/pool.jpg)
+![Pool Table](/images/pool.jpg)
 ::
 
 <hr/>
 
-### TV-зона
+### TV Zone
 
-В бильярдном зале расположена TV-зона с высококачественным столом для русского бильярда, произведённым в знаменитой Мастерской "Левитин и Пушкарев" стоимостью более 3 000 000 ₽, и двухуровневыми трибунами для зрителей. Напротив стола расположен большой проектор для просмотра спортивных матчей. Игры в TV-зоне Вы можете смотреть не только воочию, но и online.
+The billiard hall features a TV zone with a high-quality Russian billiard table manufactured by the famous "Levitin and Pushkarev" Workshop, worth over 3,000,000 ₽, and two-level spectator stands. A large projector for watching sports matches is located opposite the table. You can watch games in the TV zone both in person and online.
 
 ::gallery{id="tv" aspect-ratio="square" :cols='{"mobile":1,"tablet":2,"desktop":3}'}
-![Трибуны](/images/tv_1.jpg)
-![TV-зона](/images/tv_2.jpg)
-![Проекционный экран](/images/tv_3.jpg)
+![Stands](/images/tv_1.jpg)
+![TV Zone](/images/tv_2.jpg)
+![Projection Screen](/images/tv_3.jpg)
 ::
 
 <hr/>
 
-### VIP-залы
+### VIP Rooms
 
-Каждый VIP-зал оборудован столами для русского бильярда.
+Each VIP room is equipped with Russian billiard tables.
 
 <hr/>
 
-### Кухня и бар
+### Kitchen and Bar
 
-С меню бара и кухни вы можете ознакомиться в разделе [Цены](price.html).
+You can check our bar and kitchen menu in the [Prices](price.html) page.
