@@ -57,6 +57,11 @@ export default defineNuxtConfig({
     strategy: 'prefix',
     defaultLocale: 'ru',
     vueI18n: './i18n.config.ts',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',
+    },
   },
   vite: {
     plugins: [tailwindcss()],
