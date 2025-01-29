@@ -3,13 +3,16 @@
     <div
       id="yamap"
       ref="mapContainer"
-      class="w-full h-full min-h-120 md:min-h-140 lg:min-h-160 3xl:min-h-240 relative"
+      class="absolute inset-0 w-full h-full object-cover"
     />
   </ClientOnly>
 </template>
 
 <script lang="ts" setup>
   import { ref, onMounted } from 'vue';
+  import { useI18n } from 'vue-i18n';
+
+  const { t } = useI18n();
 
   declare global {
     interface Window {
@@ -44,13 +47,13 @@
       myMap.getCenter(),
       {
         balloonContentHeader:
-          '<a href="https://legendbc.ru/" target="_blank" rel="nofollow noopener">Легенда</a><br>' +
-          '<span class="description">Бильярдный клуб</span>W',
+          `<a href="https://legendbc.ru/" target="_blank" rel="nofollow noopener">${t('company.name.short')}</a><br>` +
+          `<span class="description">${t('company.type')}</span>`,
         balloonContentBody:
-          '<a href="tel:+79166244545">+7 916 624 4545</a><br/>' +
-          'Москва, Митино, Пятницкое ш., д. 3,<br/> ТЦ "Пятница", 2 этаж',
-        balloonContentFooter: 'ПН - ЧТ 12:00 - 02:00<br/>' + 'ПТ - ВС 12:00 - 06:00',
-        hintContent: 'Бильярдный клуб "Легенда"',
+          `<a href="tel:${t('company.contacts.phone')}">${t('company.contacts.phone')}</a><br/>` +
+          `${t('company.contacts.address.full')}`,
+        balloonContentFooter: `${t('company.schedule.weekdays')}<br/>${t('company.schedule.weekend')}`,
+        hintContent: t('map.hint'),
       },
       {
         iconLayout: 'default#image',

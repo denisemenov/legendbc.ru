@@ -29,7 +29,7 @@
   --breakpoint-3xl: 120rem;
 
   --shadow-3xl: 0 35px 35px rgba(0, 0, 0, 0.25);
-  --shadow-block: 0 0px 8px 4px rgba(0, 0, 0, 0.25);
+  --shadow-block: 0 0px 8px 1px var(--color-stone-200);
 }
 
 @view-transition {

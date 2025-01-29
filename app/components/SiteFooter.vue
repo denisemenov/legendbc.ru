@@ -1,68 +1,73 @@
 <template>
   <footer
     id="contacts"
-    class="flex flex-col md:flex-row gap-4"
+    class="flex flex-col lg:flex-row-reverse gap-4"
   >
-    <div class="w-full md:w-1/2">
-      <YaMap />
-    </div>
-
     <div
-      class="w-full md:w-1/2 flex flex-col items-center justify-center min-h-[600px] p-4 md:p-10 bg-stone-100 hover:bg-gold-100 transition-colors duration-300 text-center"
+      class="flex flex-col items-center justify-center w-full lg:w-1/2 p-4 md:p-8 text-center hover:bg-gold-100 shadow-block shadow-stone-400/20 hover:shadow-gold-400/20 transition-colors duration-300"
     >
-      <h2 class="font-serif font-extrabold text-4xl mt-12 mx-auto text-center">Контакты</h2>
+      <h2 class="font-serif font-extrabold text-4xl mt-12 mx-auto text-center">{{ $t('footer.title') }}</h2>
       <p class="font-sans-display font-light italic text-lg text-gold-500 mb-8 mx-auto text-center">
-        Нас легко найти и мы умеем общаться любым удобным вам способом
+        {{ $t('footer.subtitle') }}
       </p>
 
-      <div class="space-y-4">
+      <div class="gap-4 mb-8">
         <p>
-          Мы находимся в 2 минутах ходьбы от м. Волоколамская: <br />
-          Пятницкое ш., д. 3, ТЦ "Пятница", 2 этаж
+          {{
+            $t('footer.findUs', {
+              walkTime: $t('company.contacts.walkTime'),
+              metro: $t('company.contacts.metro'),
+            })
+          }}
+          <br />
+          {{ $t('company.contacts.address.full') }}
         </p>
 
         <p>
           <NuxtLink
-            to="tel:+79166244545"
-            class="hover:text-gold-500 transition-colors"
+            :to="`tel:${$t('company.contacts.phone')}`"
+            class="text-gold-500 font-bold hover:text-gold-600 transition-colors"
           >
-            +7 916 624 4545
+            {{ $t('company.contacts.phone') }}
           </NuxtLink>
         </p>
 
         <p>
-          ПН - ЧТ 12:00 - 02:00 <br />
-          ПТ - ВС 12:00 - 06:00
+          {{ $t('company.schedule.weekdays') }} <br />
+          {{ $t('company.schedule.weekend') }}
         </p>
 
-        <div class="space-y-1">
+        <div class="flex flex-col">
           <NuxtLink
-            v-for="link in socials"
-            :key="link.name"
-            :to="link.url"
-            class="block hover:text-gold-500 transition-colors"
+            v-for="social in socialLinks"
+            :key="social.name"
+            :to="social.link"
+            target="_blank"
+            class="text-gold-500 font-bold hover:text-gold-600 transition-colors capitalize"
           >
-            {{ link.name }}
+            {{ social.title }}
           </NuxtLink>
         </div>
       </div>
+    </div>
+
+    <div
+      class="w-full lg:w-1/2 min-h-120 md:min-h-140 lg:min-h-160 3xl:min-h-240 relative shadow-block shadow-stone-400/20 hover:shadow-gold-400/20"
+    >
+      <YaMap />
     </div>
   </footer>
 </template>
 
 <script lang="ts" setup>
-  const socials = [
-    {
-      name: 'Vk',
-      url: 'https://vk.com/legendbcru',
-    },
-    {
-      name: 'Facebook',
-      url: 'https://facebook.com/legendbcru',
-    },
-    {
-      name: 'Instagram',
-      url: 'https://instagram.com/legendbcru',
-    },
-  ];
+  interface SocialLink {
+    name: string;
+    title: string;
+    link: string;
+  }
+
+  const socialLinks = computed<SocialLink[]>(() => {
+    const links = $tm('company.social');
+    return Array.isArray(links) ? links : [];
+  });
 </script>

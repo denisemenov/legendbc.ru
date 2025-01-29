@@ -1,11 +1,17 @@
 <script setup></script>
 
 <template>
-  <div class="flex flex-col min-h-screen gap-4 p-4">
-    <SiteHeader />
-    <NuxtPage />
-    <SiteFooter />
-  </div>
+    <NuxtPage /> 
 </template>
 
-<style></style>
+<style>
+  .page-enter-active,
+  .page-leave-active {
+    transition: all 0.2s;
+  }
+  .page-enter-from,
+  .page-leave-to {
+    opacity: 0;
+    filter: blur(1rem);
+  }
+</style>

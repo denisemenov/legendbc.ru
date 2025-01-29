@@ -7,7 +7,7 @@
 
           <div class="mt-4 lg:mt-2">
             <NuxtLink
-              to="tel:+79166244545"
+              :to="`tel:${$t('company.contacts.phone')}`"
               class="flex justify-center items-center hover:opacity-80 transition"
             >
               <NuxtImg
@@ -15,7 +15,7 @@
                 alt="Телефон"
                 class="w-4 h-4 block"
               />
-              <span class="text-white font-bold text-base tracking-tight ml-1">+7&nbsp;916&nbsp;624&nbsp;4545</span>
+              <span class="text-white font-bold text-base tracking-tight ml-1">{{ $t('company.contacts.phone') }}</span>
             </NuxtLink>
           </div>
         </div>
@@ -49,10 +49,12 @@
             <NuxtLinkLocale
               v-for="link in navLinks"
               :key="link.to"
-              :to="link.to"
-              class="p-2 font-semibold lg:text-white! lg:hover:text-slate-200! transition"
+              :to="localePath(link.to)"
+              class="p-2 font-semibold lg:text-white lg:hover:text-slate-200 transition"
+              :class="{ 'bg-gold-500 text-white': isActiveLink(link.to) }"
+              @click="closeMenu"
             >
-              {{ link.text }}
+              {{ $t(link.text) }}
             </NuxtLinkLocale>
 
             <div class="w-full lg:w-0.5 h-px lg:h-10 bg-gold-200 lg:bg-white my-4 lg:my-0 lg:mx-4"></div>
@@ -61,11 +63,16 @@
               <SwitchLocalePathLink
                 v-for="lang of locales"
                 :locale="lang.code"
-                @click="setLocale(lang.code)"
-                class="p-2 font-semibold lg:text-white! lg:hover:text-slate-200! transition uppercase"
-                :class="{ 'text-gold-300!': currentLocale === lang.code }"
+                @click="
+                  () => {
+                    setLocale(lang.code);
+                    closeMenu();
+                  }
+                "
+                class="p-2 font-semibold lg:text-white lg:hover:text-slate-200 transition uppercase"
+                :class="{ 'bg-gold-500 text-white': currentLocale === lang.code }"
               >
-                {{ lang.code }}
+                {{ lang.name }}
               </SwitchLocalePathLink>
             </div>
           </div>
@@ -77,21 +84,34 @@
 
 <script lang="ts" setup>
   import { ref, computed } from 'vue';
-  const { setLocale, locales, locale } = useI18n();
+  const { setLocale, locales, locale, t } = useI18n();
+  const route = useRoute();
+  const localePath = useLocalePath();
 
   const currentLocale = computed(() => locale.value);
   const isMenuOpen = ref(false);
 
   const navLinks = [
-    { to: '/about', text: 'О клубе' },
-    { to: '/price', text: 'Цены' },
-    { to: '/events', text: 'Корпоративы' },
-    { to: '/contacts', text: 'Контакты' },
+    { to: '/about', text: 'nav.about' },
+    { to: '/price', text: 'nav.price' },
+    { to: '/events', text: 'nav.events' },
+    { to: '/contacts', text: 'nav.contacts' },
   ];
+
+  const isActiveLink = (path: string) => route.path === localePath(path);
+
+  const setBodyScroll = (disable: boolean) => {
+    document.body.style.overflow = disable ? 'hidden' : '';
+  };
+
+  const closeMenu = () => {
+    isMenuOpen.value = false;
+    setBodyScroll(false);
+  };
 
   const toggleMenu = () => {
     isMenuOpen.value = !isMenuOpen.value;
-    document.body.style.overflow = isMenuOpen.value ? 'hidden' : '';
+    setBodyScroll(isMenuOpen.value);
   };
 </script>
 

@@ -1,7 +1,7 @@
 <template>
   <div
-    class="grid gap-4 my-4"
-    :class="gridClasses"
+    class="grid gap-4 w-full"
+    :class="[gridClasses, props.class]"
   >
     <slot mdc-unwrap="p" />
   </div>
@@ -18,6 +18,7 @@
 
   const props = defineProps<{
     cols?: Columns;
+    class?: string;
   }>();
 
   const defaultCols = { mobile: 1, tablet: 2, desktop: 3 };

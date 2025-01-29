@@ -2,12 +2,14 @@
   <NuxtLink
     v-if="isExternal || isSpecialProtocol"
     v-bind="bindProps"
+    class="text-gold-500 font-bold hover:text-gold-600 transition-colors"
   >
     <slot mdc-unwrap="p" />
   </NuxtLink>
   <NuxtLinkLocale
     v-else
     v-bind="bindProps"
+    class="text-gold-500 font-bold hover:text-gold-600 transition-colors"
   >
     <slot mdc-unwrap="p" />
   </NuxtLinkLocale>

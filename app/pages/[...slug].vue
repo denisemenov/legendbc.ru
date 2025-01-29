@@ -34,10 +34,14 @@
 </script>
 
 <template>
-  <ContentRenderer
-    v-if="page"
-    tag="main"
-    :value="page"
-    :class="classes"
-  />
+  <div class="flex flex-col min-h-screen gap-4 p-4">
+    <SiteHeader />
+    <ContentRenderer
+      v-if="page"
+      tag="main"
+      :value="page"
+      :class="classes"
+    />
+    <SiteFooter />
+  </div>
 </template>

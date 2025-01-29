@@ -1,24 +1,30 @@
 <template>
-  <div class="relative">
-    <div
-      class="flex flex-col gap-16 py-16 w-full bg-cover bg-center bg-no-repeat relative"
-      :style="{
-        backgroundImage: `linear-gradient(180deg, rgba(26, 26, 26, 0.5), rgba(26, 26, 26, 0.5)), url(/images/slide_1.jpg)`,
-      }"
-    >
-      <HeaderNav />
+  <header
+    class="flex flex-col items-center justify-between w-full gap-16 p-8 md:p-16 bg-cover bg-center bg-no-repeat relative bg-[url(/images/slide_1.jpg)] before:absolute before:inset-0 before:bg-black/50 shadow-block hover:shadow-stone-300"
+    :class="{
+      'h-[calc(100vh-2rem)]': isHomePage,
+      'h-[400px]': !isHomePage,
+    }"
+  >
+    <HeaderNav />
 
+    <div class="relative z-10">
       <h1 class="text-center text-3xl md:text-4xl font-serif font-bold tracking-wide text-white">
-        <!-- {{ title || 'Бильярдный клуб Легенда' }} -->
-        Бильярдный клуб Легенда
+        {{ $t('company.name.full') }}
       </h1>
+
+      <p class="text-center text-lg font-serif tracking-wide text-white italic">
+        {{ $t('company.description') }}
+      </p>
     </div>
-  </div>
+  </header>
 </template>
 
 <script lang="ts" setup>
+  const route = useRoute();
+  const isHomePage = computed(() => route.path === '/' || route.path === '/en');
+
   interface Props {
-    // title: string;
     backgroundImage?: string;
   }
 
