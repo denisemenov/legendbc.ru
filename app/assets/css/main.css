@@ -111,3 +111,17 @@ table {
 hr {
   @apply border-t border-gold-400 my-8;
 }
+
+/* yamap */
+
+#yamap {
+  @apply overflow-hidden;
+}
+
+.ymaps-2-1-79-balloon__content {
+  @apply p-4 text-sm leading-relaxed;
+}
+
+.ymaps-2-1-79-balloon__content a {
+  @apply text-gold-500 font-bold hover:text-gold-700;
+}
