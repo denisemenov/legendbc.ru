@@ -11,7 +11,7 @@
     "format": "prettier . --write"
   },
   "dependencies": {
-    "@nuxt/content": "https://pkg.pr.new/@nuxt/content@3006",
+    "@nuxt/content": "latest",
     "@nuxt/fonts": "latest",
     "@nuxt/image": "latest",
     "@nuxtjs/i18n": "latest",
@@ -23,6 +23,7 @@
     "vue-router": "latest"
   },
   "devDependencies": {
+    "@nuxthq/studio": "^2.2.1",
     "sass-embedded": "latest"
   },
   "packageManager": "pnpm@9.15.4"

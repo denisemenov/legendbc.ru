@@ -2,7 +2,7 @@
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineNuxtConfig({
-  modules: ['@nuxt/content', '@nuxtjs/i18n', '@nuxt/fonts', '@nuxt/image'],
+  modules: ['@nuxt/content', '@nuxtjs/i18n', '@nuxt/fonts', '@nuxt/image', '@nuxthq/studio'],
 
   content: {
     renderer: {
@@ -39,7 +39,7 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: true },
   app: {
-    pageTransition: { name: 'page', mode: 'out-in' }
+    pageTransition: { name: 'page', mode: 'out-in' },
   },
   future: {
     compatibilityVersion: 4,
@@ -60,8 +60,8 @@ export default defineNuxtConfig({
     },
     vueI18n: './i18n.config.ts',
     experimental: {
-      autoImportTranslationFunctions: true
-    }
+      autoImportTranslationFunctions: true,
+    },
   },
   vite: {
     plugins: [tailwindcss()],
