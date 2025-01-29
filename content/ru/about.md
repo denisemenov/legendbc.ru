@@ -1,0 +1,175 @@
+---
+title: Бильярдный клуб Легенда
+description: Описание бильярдного клуба Легенда
+---
+
+::heading  
+Легендарный клуб
+
+#description  
+Клуб, который выбирают чемпионы
+::
+
+::grid{:cols='{"mobile":1,"tablet":1,"desktop":2}'}
+:::column   
+Бильярдный клуб "Легенда" - это:
+
+- 17 легендарных качественных столов
+- Уникальные VIP-залы
+- Неповторимая атмосфера чемпионов
+:::
+
+:::column 
+Идеальные условия для игры в бильярд:
+
+- Профессиональное оборудование
+- Опытные инструкторы
+- Удобное расположение
+:::
+::
+
+<hr/>
+
+### Бильярдный зал
+
+В нашем клубе установлено 17 столов: 12 столов для русского бильярда в общем зале, 1 стол в TV-зоне, 2 стола в отдельных VIP-залах и 2 стола для американского пула.
+
+::grid{:cols='{"mobile":1,"tablet":2,"desktop":3}'}
+:::column   
+::img-lightbox  
+---  
+gallery: hall  
+aspect-ratio: square
+---  
+![Основной зал](/images/hall_1.jpg)
+::
+:::
+:::column 
+::img-lightbox
+---
+gallery: hall
+aspect-ratio: square
+---
+![Игровая зона](/images/hall_2.jpg)
+::
+:::
+:::column 
+::img-lightbox
+---
+gallery: hall
+aspect-ratio: square
+---
+![Общий вид зала](/images/hall_3.jpg)
+::
+:::
+::
+
+<hr/>
+
+### Русский бильярд
+
+К Вашим услугам 15 столов высшего класса, изготовленные легендарной компанией E.St:
+
+- Усовершенствованная металлоконстурукция
+- Итальянские плиты Carlo Jufra 45mm
+- Сукно Iwan Simonis 760 от мирового лидера
+- Шары Aramith Premier 280g от мирового лидера
+- Лузы 70,5 -71mm
+
+::grid{:cols='{"mobile":1,"tablet":2,"desktop":3}'}
+:::column   
+::img-lightbox  
+---  
+gallery: billiard  
+aspect-ratio: square
+---  
+![Русский бильярд](/images/billiard_1.jpg)
+::
+:::
+:::column 
+::img-lightbox
+---
+gallery: billiard
+aspect-ratio: square
+---
+![Профессиональный стол](/images/billiard_2.jpg)
+::
+:::
+:::column 
+::img-lightbox
+---
+gallery: billiard
+aspect-ratio: square
+---
+![Игровая зона](/images/billiard_3.jpg)
+::
+:::
+::
+
+ 
+
+<hr/>
+
+### Американский пул
+
+Два отличнейших 9-ти футовых стола для американского пула. 
+
+::grid{:cols='{"mobile":1,"tablet":2,"desktop":3}'}
+:::column   
+::img-lightbox  
+---  
+gallery: pool  
+aspect-ratio: square
+---  
+![Стол для пула](/images/pool.jpg)
+::
+:::
+::
+
+<hr/>
+
+### TV-зона
+
+В бильярдном зале расположена TV-зона с высококачественным столом для русского бильярда, произведённым в знаменитой Мастерской "Левитин и Пушкарев" стоимостью более 3 000 000 ₽, и двухуровневыми трибунами для зрителей. Напротив стола расположен большой проектор для просмотра спортивных матчей. Игры в TV-зоне Вы можете смотреть не только воочию, но и online. 
+
+::grid{:cols='{"mobile":1,"tablet":2,"desktop":3}'}
+:::column   
+::img-lightbox  
+---  
+gallery: tv  
+aspect-ratio: square
+---  
+![Трибуны](/images/tv_1.jpg)
+::
+:::
+:::column 
+::img-lightbox
+---
+gallery: tv
+aspect-ratio: square
+---
+![TV-зона](/images/tv_2.jpg)
+::
+:::
+:::column 
+::img-lightbox
+---
+gallery: tv
+aspect-ratio: square
+---
+![Проекционный экран](/images/tv_3.jpg)
+::
+:::
+::
+
+<hr/>
+
+### VIP-залы
+
+Каждый VIP-зал оборудован столами для русского бильярда.
+
+<hr/>
+
+### Кухня и бар
+
+С меню бара и кухни вы можете ознакомиться в разделе [Цены](price.html).

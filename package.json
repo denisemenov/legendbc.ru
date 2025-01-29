@@ -1,32 +1,28 @@
 {
-  "name": "legendbc",
+  "name": "i18n",
   "private": true,
   "type": "module",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "nuxt preview"
+    "preview": "nuxt preview",
+    "lint": "eslint .",
+    "format": "prettier . --write"
   },
   "dependencies": {
     "@nuxt/content": "https://pkg.pr.new/@nuxt/content@3006",
     "@nuxt/fonts": "latest",
-    "@nuxt/ui": "latest",
-    "@nuxthq/studio": "latest",
+    "@nuxt/image": "latest",
     "@nuxtjs/i18n": "latest",
-    "@tailwindcss/postcss": "next",
-    "@tailwindcss/vite": "^4.0.0",
+    "@tailwindcss/vite": "latest",
     "nuxt": "latest",
-    "nuxt-swiper": "latest",
-    "swiper": "latest",
+    "photoswipe": "latest",
+    "tailwindcss": "latest",
     "vue": "latest",
     "vue-router": "latest"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "latest",
-    "@tailwindcss/typography": "latest",
-    "sass-embedded": "latest",
-    "tailwindcss": "^4.0.0"
-  },
-  "packageManager": "pnpm@9.15.4"
+    "sass-embedded": "latest"
+  }
 }
