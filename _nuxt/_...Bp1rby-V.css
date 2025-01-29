@@ -1,0 +1,1 @@
+#yamap{@apply overflow-hidden;}:deep(.ymaps-2-1-79-balloon__content){@apply p-4 text-sm leading-relaxed;}:deep(.ymaps-2-1-79-balloon__content) a{@apply text-gold-500 font-bold hover:text-gold-700;}
