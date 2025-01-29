@@ -54,7 +54,7 @@ export default defineNuxtConfig({
       { code: 'en', name: 'En', iso: 'en-US', file: 'en.json' },
       { code: 'ru', name: 'Ру', iso: 'ru-RU', file: 'ru.json' },
     ],
-    strategy: 'prefix',
+    strategy: 'prefix_except_default',
     defaultLocale: 'ru',
     vueI18n: './i18n.config.ts',
     detectBrowserLanguage: {
