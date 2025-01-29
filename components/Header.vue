@@ -9,7 +9,8 @@
       <Navbar />
 
       <h1 class="text-center text-3xl md:text-4xl font-serif font-bold tracking-wide text-white">
-        {{ title || 'Бильярдный клуб Легенда' }}
+        <!-- {{ title || 'Бильярдный клуб Легенда' }} -->
+        Бильярдный клуб Легенда
       </h1>
     </div>
   </div>
@@ -17,7 +18,7 @@
 
 <script lang="ts" setup>
 interface Props {
-  title: string;
+  // title: string;
   backgroundImage?: string;
 }
 

@@ -21,7 +21,12 @@ export default <Partial<Config>>{
   content: [],
   theme: {
     extend: {
-      colors,
+      aspectRatio: {
+        auto: 'auto',
+        square: '1 / 1',
+        video: '16 / 9'
+      },
+      // colors,
       fontFamily: {
         sans: ['Noto Sans', 'sans-serif'],
         serif: ['Noto Serif', 'serif'],

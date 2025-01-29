@@ -1,5 +1,5 @@
 <template>
-  <footer class="flex flex-col md:flex-row gap-5" id="contacts">
+  <footer class="flex flex-col md:flex-row gap-4" id="contacts">
     <div class="w-full md:w-1/2">
       <ClientOnly>
         <div id="yamap" ref="mapContainer" class="w-full min-h-[400px] sm:min-h-[600px] relative"></div>
@@ -7,7 +7,7 @@
     </div>
 
     <div
-      class="w-full md:w-1/2 flex flex-col items-center justify-center min-h-[600px] p-5 md:p-10 bg-stone-100 hover:bg-gold-100 transition-colors duration-300 text-center"
+      class="w-full md:w-1/2 flex flex-col items-center justify-center min-h-[600px] p-4 md:p-10 bg-stone-100 hover:bg-gold-100 transition-colors duration-300 text-center"
     >
       <h2 class="text-4xl font-serif font-bold tracking-wide mb-1">Контакты</h2>
       <h5 class="text-gold-500 font-serif italic mb-8">

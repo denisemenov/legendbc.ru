@@ -14,7 +14,7 @@
         </div>
 
         <button
-          class="lg:hidden top-10 right-5 border-2 border-white p-2.5 z-[999] transition-colors"
+          class="lg:hidden top-10 right-4 border-2 border-white p-2.5 z-[999] transition-colors"
           :class="{ 'bg-gold-500': isMenuOpen }"
           @click="toggleMenu"
         >
@@ -46,6 +46,10 @@
             </NuxtLink>
           </div>
         </nav>
+
+        <div class="flex flex-row items-center justify-center gap-2">
+          <button v-for="lang of locales" :key="lang.code" @click="setLocale(lang.code)"> ({{ lang.code }}) </button>
+        </div>
       </div>
     </div>
   </div>
@@ -53,6 +57,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
+const { setLocale, locales, locale } = useI18n();
 
 const isMenuOpen = ref(false);
 

@@ -1,19 +1,31 @@
 <template>
   <main class="prose prose-stone max-w-3xl mx-auto my-8">
-    <ContentDoc />
+    <ContentRenderer v-if="page" :dir="localeProperties?.dir ?? 'ltr'" :value="page" />
   </main>
 </template>
 
-<script setup> 
-const pageTitle = usePageTitle()
-const title = await useMarkdownTitle()
+<script setup lang="ts">
+import { withLeadingSlash } from 'ufo';
+import type { Collections } from '@nuxt/content';
 
-// Устанавливаем заголовок только если страница существует
-if (title) {
-  pageTitle.value = title
-  
-  useHead({
-    title: `${title} - Бильярдный клуб Легенда`
-  })
+const route = useRoute();
+const { locale, localeProperties } = useI18n();
+const slug = computed(() => withLeadingSlash(String(route.params.slug)));
+
+const { data: page } = await useAsyncData(
+  'page-' + slug.value,
+  async () => {
+    const collection = ('content_' + locale.value) as keyof Collections;
+    const content = await queryCollection(collection).path(slug.value).first();
+
+    return content;
+  },
+  {
+    watch: [locale],
+  },
+);
+
+if (!page.value) {
+  throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true });
 }
 </script>

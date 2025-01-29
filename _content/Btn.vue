@@ -9,14 +9,13 @@
         block && 'w-full',
       ]"
     >
-      <ContentSlot :use="$slots.default" unwrap="p" />
+      <slot :use="$slots.default" unwrap="p" />
     </a>
   </div>
 </template>
 
 <script setup lang="ts">
 import { computed } from 'vue';
-import { ContentSlot } from '#components';
 
 /**
  * Слоты:
