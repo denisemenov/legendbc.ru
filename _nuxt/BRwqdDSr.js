@@ -1,1 +1,0 @@
-import{ar as r,as as e}from"./KieM5fuj.js";const o=()=>({legacy:!1,locale:"ru",messages:{en:r,ru:e},fallbackLocale:"ru",datetimeFormats:{en:{short:{year:"numeric",month:"short",day:"numeric"}},ru:{short:{year:"numeric",month:"short",day:"numeric"}}}});export{o as default};
