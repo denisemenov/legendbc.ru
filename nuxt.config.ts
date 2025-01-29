@@ -2,7 +2,7 @@
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineNuxtConfig({
-  modules: ['@nuxt/content', '@nuxtjs/i18n', '@nuxt/fonts', '@nuxt/image', '@nuxthq/studio'],
+  modules: ['@nuxt/content', '@nuxtjs/i18n', '@nuxt/fonts', '@nuxt/image'],
 
   content: {
     renderer: {

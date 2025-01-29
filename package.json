@@ -23,7 +23,6 @@
     "vue-router": "latest"
   },
   "devDependencies": {
-    "@nuxthq/studio": "^2.2.1",
     "sass-embedded": "latest"
   },
   "packageManager": "pnpm@9.15.4"
