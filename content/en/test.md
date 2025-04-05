@@ -1,4 +1,4 @@
 ---
-title: Страница
-description: Пример использования
+title: Page
+description: Example
 ---

@@ -1,12 +1,14 @@
 {
-  "name": "i18n",
+  "name": "legendbc.ru",
   "private": true,
   "type": "module",
+  "packageManager": "pnpm@10.7.1",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
     "lint": "eslint .",
     "format": "prettier . --write"
   },
@@ -24,6 +26,5 @@
   },
   "devDependencies": {
     "sass-embedded": "latest"
-  },
-  "packageManager": "pnpm@9.15.4"
+  }
 }

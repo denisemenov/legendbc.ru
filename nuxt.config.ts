@@ -47,16 +47,14 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
-  compatibilityDate: '2025-01-18',
+  compatibilityDate: '2025-02-05',
   i18n: {
-    langDir: 'locales',
     locales: [
-      { code: 'en', name: 'En', iso: 'en-US', file: 'en.json' },
-      { code: 'ru', name: 'Ру', iso: 'ru-RU', file: 'ru.json' },
+      { code: 'en', name: 'En', file: 'en.json' },
+      { code: 'ru', name: 'Ру', file: 'ru.json' },
     ],
     strategy: 'prefix_except_default',
     defaultLocale: 'ru',
-    vueI18n: './i18n.config.ts',
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: 'i18n_redirected',
@@ -66,5 +64,5 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  css: ['~/assets/css/main.css'],
+  css: ['./assets/css/main.css'],
 });

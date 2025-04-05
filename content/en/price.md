@@ -67,12 +67,12 @@ We create perfect conditions for playing billiards
 | 12:00 - 02:00 | 1200 ₽  |
 | 02:00 - 12:00 | 1700 ₽  |
 
-***This information does not constitute a public offer.***
+**_This information does not constitute a public offer._**
 
-*You can find the current price list at the Consumer Corner stand or at the club bar.*
+_You can find the current price list at the Consumer Corner stand or at the club bar._
 
-*All prices are per hour of game time.*
+_All prices are per hour of game time._
 
-*Holiday rates are the same as weekend rates!*
+_Holiday rates are the same as weekend rates!_
 
-*From Tuesday to Friday after 2:00 AM and on Saturday and Sunday after 6:00 AM, we are open until the last guest leaves.*
+_From Tuesday to Friday after 2:00 AM and on Saturday and Sunday after 6:00 AM, we are open until the last guest leaves._
