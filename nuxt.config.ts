@@ -8,6 +8,9 @@ export default defineNuxtConfig({
     renderer: {
       anchorLinks: false,
     },
+    preview: {
+      api: 'https://api.nuxt.studio',
+    },
   },
 
   fonts: {
@@ -39,17 +42,16 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: true },
   app: {
-    pageTransition: { name: 'page', mode: 'out-in' }
+    pageTransition: { name: 'page', mode: 'out-in' },
   },
   future: {
     compatibilityVersion: 4,
   },
-  compatibilityDate: '2025-01-18',
+  compatibilityDate: '2025-02-05',
   i18n: {
-    langDir: 'locales',
     locales: [
-      { code: 'en', name: 'En', iso: 'en-US', file: 'en.json' },
-      { code: 'ru', name: 'Ру', iso: 'ru-RU', file: 'ru.json' },
+      { code: 'en', name: 'En', file: 'en.json' },
+      { code: 'ru', name: 'Ру', file: 'ru.json' },
     ],
     strategy: 'prefix_except_default',
     defaultLocale: 'ru',
@@ -58,13 +60,9 @@ export default defineNuxtConfig({
       cookieKey: 'i18n_redirected',
       redirectOn: 'root',
     },
-    vueI18n: './i18n.config.ts',
-    experimental: {
-      autoImportTranslationFunctions: true
-    }
   },
   vite: {
     plugins: [tailwindcss()],
   },
-  css: ['~/assets/css/main.css'],
+  css: ['./assets/css/main.css'],
 });

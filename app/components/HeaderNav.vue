@@ -1,23 +1,21 @@
 <template>
   <div class="z-50 bg-transparent w-full">
-    <div class="w-4/5 max-w-[1920px] mx-auto">
+    <div class="max-w-screen-xl mx-auto">
       <div class="flex flex-row items-center justify-between">
-        <div class="flex flex-col items-center lg:items-start">
+        <div class="flex flex-col items-center lg:items-start gap-2">
           <HeaderLogo />
 
-          <div class="mt-4 lg:mt-2">
-            <NuxtLink
-              :to="`tel:${$t('company.contacts.phone')}`"
-              class="flex justify-center items-center hover:opacity-80 transition"
-            >
-              <NuxtImg
-                src="/images/phone.svg"
-                alt="Телефон"
-                class="w-4 h-4 block"
-              />
-              <span class="text-white font-bold text-base tracking-tight ml-1">{{ $t('company.contacts.phone') }}</span>
-            </NuxtLink>
-          </div>
+          <NuxtLink
+            :to="`tel:${$t('company.contacts.phone')}`"
+            class="flex justify-center items-center hover:opacity-80 transition gap-0.5"
+          >
+            <NuxtImg
+              src="/images/phone.svg"
+              alt="Телефон"
+              class="w-[14px] h-[14px] block"
+            />
+            <span class="text-white font-bold text-base tracking-tight">{{ $t('company.contacts.phone') }}</span>
+          </NuxtLink>
         </div>
 
         <button

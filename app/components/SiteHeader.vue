@@ -1,6 +1,6 @@
 <template>
   <header
-    class="flex flex-col items-center justify-between w-full gap-16 p-8 md:p-16 bg-cover bg-center bg-no-repeat relative bg-[url(/images/slide_1.jpg)] before:absolute before:inset-0 before:bg-black/50 shadow-block hover:shadow-stone-300"
+    class="flex flex-col items-center justify-between w-full gap-8 p-4 lg:gap-16 md:p-8 lg:p-16 bg-cover bg-center bg-no-repeat relative bg-[url(/images/slide_1.jpg)] before:absolute before:inset-0 before:bg-black/50 shadow-block hover:shadow-stone-300"
     :class="{
       'h-[calc(100vh-2rem)]': isHomePage,
       'h-[400px]': !isHomePage,
@@ -9,7 +9,7 @@
     <HeaderNav />
 
     <div class="relative z-10">
-      <h1 class="text-center text-3xl md:text-4xl font-serif font-bold tracking-wide text-white">
+      <h1 class="text-center tracking-wide text-white">
         {{ $t('company.name.full') }}
       </h1>
 

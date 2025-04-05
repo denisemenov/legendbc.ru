@@ -51,7 +51,10 @@
           `<span class="description">${t('company.type')}</span>`,
         balloonContentBody:
           `<a href="tel:${t('company.contacts.phone')}">${t('company.contacts.phone')}</a><br/>` +
-          `${t('company.contacts.address.full')}`,
+          `${t('company.contacts.address.city')}, ${t('company.contacts.address.street')}, ${t(
+            'company.contacts.address.building'
+          )} <br>` +
+          `${t('company.contacts.address.mall')}, ${t('company.contacts.address.floor')}`,
         balloonContentFooter: `${t('company.schedule.weekdays')}<br/>${t('company.schedule.weekend')}`,
         hintContent: t('map.hint'),
       },
@@ -81,16 +84,4 @@
   });
 </script>
 
-<style lang="scss">
-  #yamap {
-    @apply overflow-hidden;
-  }
-
-  :deep(.ymaps-2-1-79-balloon__content) {
-    @apply p-4 text-sm leading-relaxed;
-  }
-
-  :deep(.ymaps-2-1-79-balloon__content) a {
-    @apply text-gold-500 font-bold hover:text-gold-700;
-  }
-</style>
+<style lang="scss"></style>

@@ -24,11 +24,11 @@
       "weekdays": "MON - THU 12:00 - 02:00",
       "weekend": "FRI - SUN 12:00 - 06:00"
     },
-    "social": [
-      { "name": "vk", "title": "VKontakte", "link": "https://vk.com/legendbcru" },
-      { "name": "facebook", "title": "Facebook", "link": "https://facebook.com/legendbcru" },
-      { "name": "instagram", "title": "Instagram", "link": "https://instagram.com/legendbcru" }
-    ]
+    "social": {
+      "vk": { "title": "VKontakte", "link": "https://vk.com/legendbcru" },
+      "facebook": { "title": "Facebook", "link": "https://facebook.com/legendbcru" },
+      "instagram": { "title": "Instagram", "link": "https://instagram.com/legendbcru" }
+    }
   },
   "nav": {
     "about": "About",

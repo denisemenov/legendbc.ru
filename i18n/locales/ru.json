@@ -24,16 +24,11 @@
       "weekdays": "ПН - ЧТ 12:00 - 02:00",
       "weekend": "ПТ - ВС 12:00 - 06:00"
     },
-    "social": [
-      { "name": "vk", "title": "VKontakte", "link": "https://vk.com/legendbcru" },
-      { "name": "facebook", "title": "Facebook", "link": "https://facebook.com/legendbcru" },
-      { "name": "instagram", "title": "Instagram", "link": "https://instagram.com/legendbcru" }
-    ],
-    "anothersocial": [
-      { "name": "vk", "link": "https://vk.com/legendbcru" },
-      { "name": "facebook", "link": "https://facebook.com/legendbcru" },
-      { "name": "instagram", "link": "https://instagram.com/legendbcru" }
-    ]
+    "social": {
+      "vk": { "title": "ВКонтакте", "link": "https://vk.com/legendbcru" },
+      "facebook": { "title": "Facebook", "link": "https://facebook.com/legendbcru" },
+      "instagram": { "title": "Instagram", "link": "https://instagram.com/legendbcru" }
+    }
   },
   "nav": {
     "about": "О клубе",

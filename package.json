@@ -1,17 +1,19 @@
 {
-  "name": "i18n",
+  "name": "legendbc.ru",
   "private": true,
   "type": "module",
+  "packageManager": "pnpm@10.7.1",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
     "lint": "eslint .",
     "format": "prettier . --write"
   },
   "dependencies": {
-    "@nuxt/content": "https://pkg.pr.new/@nuxt/content@3006",
+    "@nuxt/content": "latest",
     "@nuxt/fonts": "latest",
     "@nuxt/image": "latest",
     "@nuxtjs/i18n": "latest",

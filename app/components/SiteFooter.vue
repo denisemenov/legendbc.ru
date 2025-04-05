@@ -39,13 +39,25 @@
 
         <div class="flex flex-col">
           <NuxtLink
-            v-for="social in socialLinks"
-            :key="social.name"
-            :to="social.link"
+            :to="$t('company.social.vk.link')"
             target="_blank"
             class="text-gold-500 font-bold hover:text-gold-600 transition-colors capitalize"
           >
-            {{ social.title }}
+            {{ $t('company.social.vk.title') }}
+          </NuxtLink>
+          <NuxtLink
+            :to="$t('company.social.facebook.link')"
+            target="_blank"
+            class="text-gold-500 font-bold hover:text-gold-600 transition-colors capitalize"
+          >
+            {{ $t('company.social.facebook.title') }}
+          </NuxtLink>
+          <NuxtLink
+            :to="$t('company.social.instagram.link')"
+            target="_blank"
+            class="text-gold-500 font-bold hover:text-gold-600 transition-colors capitalize"
+          >
+            {{ $t('company.social.instagram.title') }}
           </NuxtLink>
         </div>
       </div>
@@ -58,16 +70,3 @@
     </div>
   </footer>
 </template>
-
-<script lang="ts" setup>
-  interface SocialLink {
-    name: string;
-    title: string;
-    link: string;
-  }
-
-  const socialLinks = computed<SocialLink[]>(() => {
-    const links = $tm('company.social');
-    return Array.isArray(links) ? links : [];
-  });
-</script>

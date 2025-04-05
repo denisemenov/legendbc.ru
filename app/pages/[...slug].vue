@@ -20,7 +20,7 @@
   );
 
   const classes = computed(() => ({
-    'gap-4 flex flex-col w-full': true,
+    'gap-4 flex flex-col w-full grow': true,
     'prose prose-stone mx-auto max-w-3xl mt-8 mb-24': slug.value !== '/',
   }));
 
@@ -45,3 +45,15 @@
     <SiteFooter />
   </div>
 </template>
+
+<style>
+  .page-enter-active,
+  .page-leave-active {
+    transition: all 0.2s;
+  }
+  .page-enter-from,
+  .page-leave-to {
+    opacity: 0;
+    filter: blur(1rem);
+  }
+</style>
