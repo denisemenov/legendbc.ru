@@ -34,10 +34,10 @@ Perfect conditions for billiards:
 
 Our club features 17 tables: 12 Russian billiard tables in the main hall, 1 table in the TV zone, 2 tables in separate VIP rooms, and 2 American pool tables.
 
-::gallery{id="hall" aspect-ratio="square" :cols='{"mobile":1,"tablet":2,"desktop":3}'}
-![Main Hall](/images/hall_1.jpg)  
-![Gaming Area](/images/hall_2.jpg)  
-![Hall Overview](/images/hall_3.jpg)  
+::gallery{id="hall" aspect-ratio="square"}
+![Main Hall](/images/hall_1.jpg)
+![Gaming Area](/images/hall_2.jpg)
+![Hall Overview](/images/hall_3.jpg)
 ::
 
 <hr/>
@@ -52,10 +52,10 @@ At your service are 15 high-class tables manufactured by the legendary company E
 - Aramith Premier 280g balls from the world leader
 - Pockets 70.5-71mm
 
-::gallery{id="billiard" aspect-ratio="square" :cols='{"mobile":1,"tablet":2,"desktop":3}'}
-![Russian Billiards](/images/billiard_1.jpg)  
-![Professional Table](/images/billiard_2.jpg)  
-![Gaming Area](/images/billiard_3.jpg)  
+::gallery{id="billiard" aspect-ratio="square"}
+![Russian Billiards](/images/billiard_1.jpg)
+![Professional Table](/images/billiard_2.jpg)
+![Gaming Area](/images/billiard_3.jpg)
 ::
 
 <hr/>
@@ -64,7 +64,7 @@ At your service are 15 high-class tables manufactured by the legendary company E
 
 Two excellent 9-foot tables for American pool.
 
-::gallery{id="pool" aspect-ratio="video" :cols='{"mobile":1,"tablet":2,"desktop":1}'}
+::gallery{id="pool" aspect-ratio="square"}
 ![Pool Table](/images/pool.jpg)
 ::
 
@@ -74,10 +74,10 @@ Two excellent 9-foot tables for American pool.
 
 The billiard hall features a TV zone with a high-quality Russian billiard table manufactured by the famous "Levitin and Pushkarev" Workshop, worth over 3,000,000 ₽, and two-level spectator stands. A large projector for watching sports matches is located opposite the table. You can watch games in the TV zone both in person and online.
 
-::gallery{id="tv" aspect-ratio="square" :cols='{"mobile":1,"tablet":2,"desktop":3}'}
-![Stands](/images/tv_1.jpg)  
-![TV Zone](/images/tv_2.jpg)  
-![Projection Screen](/images/tv_3.jpg)  
+::gallery{id="tv" aspect-ratio="square"}
+![Stands](/images/tv_1.jpg)
+![TV Zone](/images/tv_2.jpg)
+![Projection Screen](/images/tv_3.jpg)
 ::
 
 <hr/>

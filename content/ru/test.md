@@ -26,16 +26,8 @@ description: Пример использования кастомных комп
 :::
 ::
 
-::gallery{:cols='{"mobile":1,"tablet":2,"desktop":3}' id=hall aspectRatio=square}
-:::column
+::gallery{id="hall" aspect-ratio="square"}
 ![Трибуны](/images/tv_1.jpg)
-:::
-
-:::column
 ![TV-зона](/images/tv_2.jpg)
-:::
-
-:::column
 ![Проекционный экран](/images/tv_3.jpg)
-:::
 ::

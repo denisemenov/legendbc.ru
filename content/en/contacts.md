@@ -51,7 +51,7 @@ _From Tuesday to Friday after 2:00 AM and on Saturday and Sunday after 6:00 AM, 
 :::
 ::
 
----
+<hr/>
 
 ::btn{href="/requisites"}
 Requisites
