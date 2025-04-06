@@ -8,10 +8,12 @@
       :alt="props.alt"
       :width="props.width"
       :height="props.height"
-      class="object-cover w-full h-full"
+      class="object-cover w-full h-full rounded-xs"
       @load="handleImageLoad"
     />
-    <span class="absolute flex h-full w-full inset-0 bg-black/40 transition-opacity duration-300 opacity-0 hover:opacity-100">
+    <span
+      class="absolute flex h-full w-full inset-0 bg-black/40 transition-opacity duration-300 opacity-0 hover:opacity-100"
+    >
       <span class="flex h-[calc(100%-1rem)] w-[calc(100%-1rem)] border-2 border-white m-2"> </span>
     </span>
   </a>

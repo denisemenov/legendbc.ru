@@ -125,3 +125,8 @@ hr {
 .ymaps-2-1-79-balloon__content a {
   @apply text-gold-500 font-bold hover:text-gold-700;
 }
+
+hr + h3 {
+  margin-top: -8px;
+  @apply -mt-2;
+}

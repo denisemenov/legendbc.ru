@@ -4,7 +4,7 @@
     :class="{ 'lg:flex-row-reverse': reversed }"
   >
     <div
-      class="flex flex-col items-center justify-center w-full p-4 md:p-8 text-center hover:bg-stone-100 shadow-block hover:shadow-stone-300 transition-colors duration-300"
+      class="flex flex-col items-center justify-center w-full p-4 md:p-8 text-center hover:bg-stone-100 shadow-block hover:shadow-stone-300 transition-colors duration-300 rounded-xs"
       :class="{ 'lg:w-1/2': image || yamap }"
     >
       <slot
@@ -22,13 +22,13 @@
 
     <div
       v-if="image || yamap"
-      class="w-full lg:w-1/2 min-h-120 md:min-h-140 lg:min-h-160 3xl:min-h-240 relative shadow-block"
+      class="w-full lg:w-1/2 min-h-120 md:min-h-140 lg:min-h-160 3xl:min-h-240 relative shadow-block rounded-xs"
     >
       <img
         v-if="image"
         :src="image"
         :alt="image"
-        class="absolute inset-0 w-full h-full object-cover"
+        class="absolute inset-0 w-full h-full object-cover rounded-xs"
       />
 
       <YaMap v-if="yamap" />

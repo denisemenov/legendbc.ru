@@ -43,5 +43,12 @@
   },
   "map": {
     "hint": "Legend Billiard Club"
+  },
+  "error": {
+    "notFound": "Page Not Found",
+    "oops": "Oops! An error occurred",
+    "pageNotFound": "The requested page doesn't exist or has been moved",
+    "somethingWrong": "Something went wrong",
+    "backToHome": "Back to Home"
   }
 }

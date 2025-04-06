@@ -19,8 +19,8 @@
         </div>
 
         <button
-          class="lg:hidden top-10 right-4 border-2 border-white p-2.5 z-[999] transition-colors"
-          :class="{ 'bg-gold-500': isMenuOpen }"
+          class="lg:hidden top-10 right-4 border-2 border-white p-2.5 z-[999] transition-colors cursor-pointer"
+          :class="{ 'bg-gold-500/70': isMenuOpen }"
           @click="toggleMenu"
         >
           <div class="w-6 h-4 relative flex flex-col justify-between">
@@ -48,8 +48,8 @@
               v-for="link in navLinks"
               :key="link.to"
               :to="localePath(link.to)"
-              class="p-2 font-semibold lg:text-white lg:hover:text-slate-200 transition"
-              :class="{ 'bg-gold-500 text-white': isActiveLink(link.to) }"
+              class="p-2 font-semibold lg:text-white lg:hover:text-slate-200 transition lg:hover:bg-gold-500/80"
+              :class="{ 'bg-gold-500/70 text-white rounded-xs': isActiveLink(link.to) }"
               @click="closeMenu"
             >
               {{ $t(link.text) }}
@@ -68,7 +68,7 @@
                   }
                 "
                 class="p-2 font-semibold lg:text-white lg:hover:text-slate-200 transition uppercase"
-                :class="{ 'bg-gold-500 text-white': currentLocale === lang.code }"
+                :class="{ 'bg-gold-500/70 text-white rounded-xs': currentLocale === lang.code }"
               >
                 {{ lang.name }}
               </SwitchLocalePathLink>

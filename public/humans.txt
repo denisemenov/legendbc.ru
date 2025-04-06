@@ -1,0 +1,12 @@
+/* TEAM */
+	Chef, creator, web designer & developer: Denis Semenov
+	Contact: hello [at] denisemenov.com
+	Site: https://denisemenov.com
+	Github: @denisemenov	
+
+/* SITE */
+	Last update: 2025/04/07
+	Language: Russian, English
+	Standards: HTML5, CSS3, ES2022
+	Components: Nuxt.js, Vue.js, TailwindCSS
+	Software: VS Code, Nuxt Studio

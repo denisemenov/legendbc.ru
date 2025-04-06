@@ -5,7 +5,7 @@
       :target="computedTarget"
       :rel="computedRel"
       :class="[
-        'flex items-center justify-center px-8 py-4 no-underline border-2 border-gold-400 text-gold-400 font-bold transition-all duration-300 hover:bg-gold-400 hover:text-white',
+        'flex items-center justify-center px-8 py-4 no-underline border-2 border-gold-400 text-gold-400 font-bold transition-all duration-300 hover:bg-gold-400 hover:text-white rounded-xs',
         block && 'w-full',
       ]"
     >

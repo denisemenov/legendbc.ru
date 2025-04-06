@@ -3,7 +3,7 @@
   import type { Collections } from '@nuxt/content';
 
   const route = useRoute();
-  const { locale } = useI18n();
+  const { locale, t } = useI18n();
   const slug = computed(() => withLeadingSlash(String(route.params.slug)));
 
   const { data: page } = await useAsyncData(
@@ -31,6 +31,49 @@
       fatal: true,
     });
   }
+
+  useSeoMeta({
+    title: () => page.value?.title,
+    description: () => page.value?.description,
+    ogTitle: () => page.value?.title,
+    ogDescription: () => page.value?.description,
+    ogImage: () => {
+      const pageImage = page.value && 'image' in page.value ? page.value.image : null;
+      return pageImage || '/images/og-image.jpg';
+    }
+  });
+  
+  useSchemaOrg({
+    '@context': 'https://schema.org',
+    '@type': 'SportsActivityLocation',
+    name: t('company.name.full'),
+    url: 'https://legendbc.ru',
+    logo: 'https://legendbc.ru/images/legend-logo-white.svg',
+    image: '/images/og-image.jpg',
+    telephone: t('company.contacts.phone'),
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: `${t('company.contacts.address.street')} ${t('company.contacts.address.building')}`,
+      addressLocality: t('company.contacts.address.city'),
+      addressRegion: t('company.contacts.address.city'),
+      addressCountry: 'RU'
+    },
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday'],
+        opens: '12:00',
+        closes: '02:00'
+      },
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Friday', 'Saturday', 'Sunday'],
+        opens: '12:00',
+        closes: '06:00'
+      }
+    ],
+    priceRange: '$$'
+  });
 </script>
 
 <template>

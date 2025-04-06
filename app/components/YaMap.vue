@@ -3,7 +3,7 @@
     <div
       id="yamap"
       ref="mapContainer"
-      class="absolute inset-0 w-full h-full object-cover"
+      class="absolute inset-0 w-full h-full object-cover rounded-xs"
     />
   </ClientOnly>
 </template>

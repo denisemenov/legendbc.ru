@@ -17,6 +17,7 @@
     "@nuxt/fonts": "latest",
     "@nuxt/image": "latest",
     "@nuxtjs/i18n": "latest",
+    "@nuxtjs/seo": "latest",
     "@tailwindcss/vite": "latest",
     "nuxt": "latest",
     "photoswipe": "latest",
