@@ -2,7 +2,34 @@
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/seo', '@nuxtjs/i18n', '@nuxt/fonts', '@nuxt/image', '@nuxt/content'],
+  modules: [
+    '@nuxtjs/seo',
+    '@nuxtjs/i18n',
+    '@nuxt/fonts',
+    '@nuxt/image',
+    'nuxt-yandex-metrika',
+    '@nuxt/content',
+    '@nuxt/scripts',
+  ],
+
+  // Загружаем GTM только в production (рекомендуется для повышения производительности)
+  $production: {
+    scripts: {
+      registry: {
+        googleTagManager: {
+          id: 'GTM-T46RLBQV',
+        }
+      }
+    }
+  },
+
+  yandexMetrika: {
+    id: 41876814,
+    webvisor: true,
+    clickmap: true,
+    trackLinks: true,
+    accurateTrackBounce: true,
+  },
 
   content: {
     renderer: {
@@ -18,26 +45,11 @@ export default defineNuxtConfig({
       processCSSVariables: true,
     },
     families: [
-      {
-        name: 'Noto Sans',
-        provider: 'google',
-      },
-      {
-        name: 'Noto Serif',
-        provider: 'google',
-      },
-      {
-        name: 'Noto Sans Display',
-        provider: 'google',
-      },
-      {
-        name: 'Noto Sans Mono',
-        provider: 'google',
-      },
-      {
-        name: 'Noto Serif Display',
-        provider: 'google',
-      },
+      { name: 'Noto Sans', provider: 'google' },
+      { name: 'Noto Serif', provider: 'google' },
+      { name: 'Noto Sans Display', provider: 'google' },
+      { name: 'Noto Sans Mono', provider: 'google' },
+      { name: 'Noto Serif Display', provider: 'google' },
     ],
   },
 

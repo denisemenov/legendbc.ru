@@ -16,9 +16,11 @@
     "@nuxt/content": "latest",
     "@nuxt/fonts": "latest",
     "@nuxt/image": "latest",
+    "@nuxt/scripts": "0.11.5",
     "@nuxtjs/i18n": "latest",
     "@nuxtjs/seo": "latest",
     "@tailwindcss/vite": "latest",
+    "@unhead/vue": "^2.0.0-rc.8",
     "nuxt": "latest",
     "photoswipe": "latest",
     "tailwindcss": "latest",
@@ -26,6 +28,7 @@
     "vue-router": "latest"
   },
   "devDependencies": {
+    "nuxt-yandex-metrika": "^1.2.9",
     "sass-embedded": "latest"
   }
 }
